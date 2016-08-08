@@ -1,0 +1,72 @@
+\documentclass[twocolumn]{article}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{graphicx,grffile}
+\usepackage{etoolbox}
+\usepackage[unicode=true]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\hypersetup{breaklinks=true, hidelinks}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{tcolorbox}
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\newenvironment{tweet}{%
+  \newcommand{\tweetUserImage}[3]{%
+    \begingroup%
+      \includegraphics[keepaspectratio,height=1em]{##2}%
+      \quad
+    \endgroup
+  }%
+  \newcommand{\tweetUserName}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\\}%
+  \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
+  \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
+  \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
+  \newcommand{\tweetPhoto}[3]{\\\includegraphics[keepaspectratio]{##3}\\}%
+  \newcommand{\tweetItself}[2]{\flushright \href{https://twitter.com/statuses/##1}{##2}}%
+  \begin{tcolorbox}[size=small,nobeforeafter]%
+  \RaggedRight%
+}{\end{tcolorbox}}
+
+% This allows line breaks in URL in more places.
+\def\UrlBreaks{\do\/\do-\do.\do=\do_\do?\do\&\do\%\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
+
+
+\begin{document}
+
+\title{Testing Tweets}
+\author{Author's Name}
+
+\maketitle
+
+\begin{abstract}
+This is a test of (semi-)automated tweets formatting.
+\end{abstract}
+
+\section{The tweets}
+
+Here are some tweets:\par
+
+\input{tweet}
+
+\input{tweet2}
+
+\input{tweet3}
+
+\input{tweet4}
+
+\input{tweet5}
+
+\input{tweet6}
+
+\input{tweet7}
+
+\end{document}

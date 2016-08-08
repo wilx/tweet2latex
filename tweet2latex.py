@@ -1,0 +1,225 @@
+#!/usr/bin/env python
+
+"""
+Fetch a single tweet as JSON using its id and output LaTeX.
+"""
+from __future__ import print_function
+
+import os
+import json
+import twarc
+import argparse
+import sys
+import urllib
+
+try:
+    import configparser  # Python 3
+except ImportError:
+    import ConfigParser as configparser  # Python 2
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+try:
+    # Python 2.6-2.7
+    from HTMLParser import HTMLParser
+except ImportError:
+    # Python 3
+    from html.parser import HTMLParser
+htmlParser = HTMLParser()
+
+def load_config(filename, profile):
+    if not os.path.isfile(filename):
+        return None
+    config = configparser.ConfigParser()
+    config.read(filename)
+    data = {}
+    for key in ['access_token', 'access_token_secret',
+                'consumer_key', 'consumer_secret']:
+        try:
+            data[key] = config.get(profile, key)
+        except configparser.NoSectionError:
+            sys.exit("no such profile %s in %s" % (profile, filename))
+        except configparser.NoOptionError:
+            sys.exit("missing %s from profile %s in %s" % (
+                     key, profile, filename))
+    return data
+
+def default_config_filename():
+    """
+    Return the default filename for storing Twitter keys.
+    """
+    home = os.path.expanduser("~")
+    return os.path.join(home, ".twarc")
+
+def escape_latex_basic(str):
+    tmp = u''
+    for ch in str:
+        if ch == '_' or ch == '#' or ch == '\\' or ch == '%' or ch == '^':
+            tmp += '\\'
+        tmp += ch
+    return tmp
+
+def tweak_filename(str):
+    return str.replace('_', '-')
+
+
+e = os.environ.get
+parser = argparse.ArgumentParser("tweet.py")
+
+parser.add_argument('tweet_id', action="store", help="Tweet ID")
+parser.add_argument("--consumer_key", action="store",
+                    default=e('CONSUMER_KEY'),
+                    help="Twitter API consumer key")
+parser.add_argument("--consumer_secret", action="store",
+                    default=e('CONSUMER_SECRET'),
+                    help="Twitter API consumer secret")
+parser.add_argument("--access_token", action="store",
+                    default=e('ACCESS_TOKEN'),
+                    help="Twitter API access key")
+parser.add_argument("--access_token_secret", action="store",
+                    default=e('ACCESS_TOKEN_SECRET'),
+                    help="Twitter API access token secret")
+parser.add_argument('-c', '--config',
+                    default=default_config_filename(),
+                    help="Config file containing Twitter keys and secrets")
+parser.add_argument('-p', '--profile', default='main',
+                    help="Name of a profile in your configuration file")
+
+args = parser.parse_args()
+
+consumer_key = args.consumer_key or os.environ.get('CONSUMER_KEY')
+consumer_secret = args.consumer_secret or os.environ.get('CONSUMER_SECRET')
+access_token = args.access_token or os.environ.get('ACCESS_TOKEN')
+access_token_secret = args.access_token_secret or os.environ.get('ACCESS_TOKEN_SECRET')
+
+if not (consumer_key and consumer_secret and
+        access_token and access_token_secret):
+    credentials = load_config(args.config, args.profile)
+    if credentials:
+        consumer_key = credentials['consumer_key']
+        consumer_secret = credentials['consumer_secret']
+        access_token = credentials['access_token']
+        access_token_secret = credentials['access_token_secret']
+    else:
+        sys.exit("Please supply Twitter authentication credentials.")
+
+tw = twarc.Twarc(consumer_key, consumer_secret, access_token, access_token_secret)
+tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id)
+
+tj = tweet.json()
+#print(json.dumps(tweet.json(), indent=2))
+#print(tj)
+#print
+#print(tj['text'])
+
+decorationsStart = dict()
+decorationsEnds = dict()
+
+# Find all hashtags and enter them into entities table.
+
+entitiesDict = tj.get('entities', None)
+if entitiesDict is not None:
+    # Hashtags
+    for hashtagRec in entitiesDict.get('hashtags', list()):
+        start = hashtagRec['indices'][0]
+        end = hashtagRec['indices'][1]
+        assert start not in decorationsStart
+        decorationsStart[start] = ('\\tweetHashtag{'
+                                       + hashtagRec['text']
+                                       + '}{')
+        assert end not in decorationsEnds
+        decorationsEnds[end] = '}'
+    # User mentions
+    for userMentionRec in entitiesDict.get('user_mentions', list()):
+        start = userMentionRec['indices'][0]
+        end = userMentionRec['indices'][1]
+        assert start not in decorationsStart
+        decorationsStart[start] = '\\tweetUserMention{' + userMentionRec['id_str'] + '}{'
+        assert end not in decorationsEnds
+        decorationsEnds[end] = '}'
+    # URLs
+    for urlRec in entitiesDict.get('urls', list()):
+        start = urlRec['indices'][0]
+        end = urlRec['indices'][1]
+        assert start not in decorationsStart
+        decorationsStart[start] = ('\\tweetUrl{'
+                                       + urlRec['url']
+                                       + '}{'
+                                       + urlRec['expanded_url']
+                                       + '}{'
+                                       + escape_latex_basic(urlRec['display_url'])
+                                       + '}{')
+        assert end not in decorationsEnds
+        decorationsEnds[end] = '}'
+    # Media
+    for mediaRec in entitiesDict.get('media', list()):
+        if mediaRec['type'] == 'photo':
+            url = mediaRec['media_url_https']
+            filename = url.split('/')[-1].split('#')[0].split('?')[0]
+            filename = tweak_filename(filename)
+            urllib.urlretrieve (url, filename)
+            start = mediaRec['indices'][0]
+            end = mediaRec['indices'][1]
+            assert start not in decorationsStart
+            decorationsStart[start] = ('\\tweetPhoto{'
+                                           + mediaRec['expanded_url']
+                                           + '}{'
+                                           + url
+                                           + '}{'
+                                           + escape_latex_basic(filename)
+                                           + '}{')
+            assert end not in decorationsEnds
+            decorationsEnds[end] = '}'
+
+# Start with user profile picture.
+
+latexText = u''
+
+url = tj['user']['profile_image_url_https']
+filename = url.split('/')[-1].split('#')[0].split('?')[0]
+filename = tweak_filename(filename)
+urllib.urlretrieve (url, filename)
+latexText += ('\\tweetUserImage{'
+                  + escape_latex_basic(url)
+                  + '}{'
+                  + escape_latex_basic(filename)
+                  + '}{'
+                  + tj['user']['id_str']
+                  + '}')
+
+# User name
+
+latexText += ('\\tweetUserName{'
+                  + escape_latex_basic(tj['user']['id_str'])
+                  + '}{'
+                  + escape_latex_basic(tj['user']['name'])
+                  + '}')
+
+# Loop over tweet's text and insert decorations for entities.
+
+tweetText = tj['text']
+i = 0
+for i in xrange(0,len(tweetText)):
+    ch = tweetText[i]
+    if i in decorationsEnds:
+        latexText += decorationsEnds[i]
+
+    if i in decorationsStart:
+        latexText += decorationsStart[i]
+
+    latexText += escape_latex_basic(ch)
+
+if i + 1 in decorationsEnds:
+    latexText += decorationsEnds[i + 1]
+
+# Add date with link to the tweet itself.
+
+latexText += '\\tweetItself{' + tj['id_str']  + '}{' + tj['created_at'] + '}'
+
+# Wrap into tweet environment.
+
+latexText = htmlParser.unescape(latexText)
+latexText = '\\begin{tweet}' + latexText + '\\end{tweet}'
+
+print(latexText.encode('utf-8'))
