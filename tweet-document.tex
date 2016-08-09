@@ -10,6 +10,10 @@
 \usepackage{wrapfig}
 \usepackage{ragged2e}
 \usepackage{tcolorbox}
+\usepackage{xcolor}
+
+\setsansfont{TeX Gyre Heros}
+
 
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 
@@ -19,6 +23,8 @@
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+\tcbuselibrary{breakable, skins}
+
 \newenvironment{tweet}{%
   \newcommand{\tweetUserImage}[3]{%
     \begingroup%
@@ -26,14 +32,17 @@
       \quad
     \endgroup
   }%
-  \newcommand{\tweetUserName}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\\}%
+  \newcommand{\tweetUserName}[3]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\quad
+    \href{https://twitter.com/intent/user?user_id=##1}{{\small \color{gray}@##3}}\\}%
   \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
   \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
   \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
   \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
-  \newcommand{\tweetItself}[2]{\flushright \href{https://twitter.com/statuses/##1}{##2}}%
-  \begin{tcolorbox}[size=small,nobeforeafter]%
-  \RaggedRight%
+  \newcommand{\tweetItself}[2]{\flushright
+    \href{https://twitter.com/statuses/##1}{{\small \color{gray}##2}}}%
+  \begin{tcolorbox}[size=small,enhanced jigsaw,breakable]%
+    \sffamily%
+    \RaggedRight%
 }{\end{tcolorbox}}
 
 % This allows line breaks in URL in more places.
@@ -53,9 +62,9 @@ This is a test of (semi-)automated tweets formatting.
 
 \section{The tweets}
 
-Here are some tweets:\par
+Here are some tweets:
 
-\input{tweet}
+\input{tweet1}
 
 \input{tweet2}
 
@@ -65,11 +74,15 @@ Here are some tweets:\par
 
 \input{tweet5}
 
+And here are some more tweets:\par
+
 \input{tweet6}
 
 \input{tweet7}
 
 \input{tweet9}
+
+Still not satisfied? Two more and that's it!\par
 
 \input{tweet10}
 

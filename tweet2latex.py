@@ -194,6 +194,8 @@ latexText += ('\\tweetUserName{'
                   + escape_latex_basic(tj['user']['id_str'])
                   + '}{'
                   + escape_latex_basic(tj['user']['name'])
+                  + '}{'
+                  + escape_latex_basic(tj['user']['screen_name'])
                   + '}')
 
 # Loop over tweet's text and insert decorations for entities.
