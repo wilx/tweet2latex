@@ -11,6 +11,9 @@ import twarc
 import argparse
 import sys
 import urllib
+from icu import SimpleDateFormat, DateFormat, Locale
+tweetDf = SimpleDateFormat("EEE MMM dd hh:mm:ss xx yyyy", Locale.getUS())
+
 
 try:
     import configparser  # Python 3
@@ -63,6 +66,9 @@ def escape_latex_basic(str):
 def tweak_filename(str):
     return str.replace('_', '-')
 
+def check_file_viable(filename):
+    return os.path.isfile(tweetJsonFile) and os.path.getsize(tweetJsonFile) > 0
+
 
 e = os.environ.get
 parser = argparse.ArgumentParser("tweet.py")
@@ -104,14 +110,17 @@ if not (consumer_key and consumer_secret and
     else:
         sys.exit("Please supply Twitter authentication credentials.")
 
-tw = twarc.Twarc(consumer_key, consumer_secret, access_token, access_token_secret)
-tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id)
-
-tj = tweet.json()
-#print(json.dumps(tweet.json(), indent=2))
-#print(tj)
-#print
-#print(tj['text'])
+tweetJsonFile = '%s.json' % args.tweet_id
+tj = None
+if check_file_viable(tweetJsonFile):
+    with open(tweetJsonFile, 'r') as infile:
+        tj = json.load(infile)
+else:
+    tw = twarc.Twarc(consumer_key, consumer_secret, access_token, access_token_secret)
+    tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id)
+    tj = tweet.json()
+    with open(tweetJsonFile, 'w') as outfile:
+        json.dump(tj, outfile, indent=2, sort_keys=True)
 
 decorationsStart = dict()
 decorationsEnds = dict()
@@ -158,7 +167,8 @@ if entitiesDict is not None:
             url = mediaRec['media_url_https']
             filename = url.split('/')[-1].split('#')[0].split('?')[0]
             filename = tweak_filename(filename)
-            urllib.urlretrieve (url, filename)
+            if not check_file_viable(filename):
+                urllib.urlretrieve (url, filename)
             start = mediaRec['indices'][0]
             end = mediaRec['indices'][1]
             assert start not in decorationsStart
@@ -179,7 +189,8 @@ latexText = u''
 url = tj['user']['profile_image_url_https']
 filename = url.split('/')[-1].split('#')[0].split('?')[0]
 filename = tweak_filename(filename)
-urllib.urlretrieve (url, filename)
+if not check_file_viable(filename):
+    urllib.urlretrieve (url, filename)
 latexText += ('\\tweetUserImage{'
                   + escape_latex_basic(url)
                   + '}{'
@@ -217,11 +228,49 @@ if i + 1 in decorationsEnds:
 
 # Add date with link to the tweet itself.
 
-latexText += '\\tweetItself{' + tj['id_str']  + '}{' + tj['created_at'] + '}'
+tweetDate = tweetDf.parse(tj['created_at'])
+
+dateLocaleName = os.getenv('LANGUAGE', os.getenv('LC_TIME', os.getenv('LANG')))
+if dateLocaleName is None:
+    dateLocaleName = 'en_US'
+dateLocale = Locale(dateLocaleName)
+
+dateFormat = DateFormat.createDateInstance(DateFormat.kLong, dateLocale)
+timeFormat = DateFormat.createTimeInstance(DateFormat.kLong, dateLocale)
+localizedTweetDate = dateFormat.format(tweetDate)
+localizedTweetTime = timeFormat.format(tweetDate)
+
+# Wrap tweet with language settings.
+
+langTable = {'cs': 'czech'}
+latexLang = langTable.get(tj['lang'], None)
+latexLangStart = ''
+latexLangEnd = ''
+if latexLang is not None:
+    latexLangStart = "\\text%s{" % latexLang
+    latexLangEnd = "}"
+
+latexText = (latexLangStart
+                 + latexText
+                 + latexLangEnd)
+
+# Add time stamp.
+
+latexText += ('\\tweetItself{'
+                  + tj['id_str']
+                  + '}{'
+                  + escape_latex_basic(tj['created_at'])
+                  + '}{'
+                  + escape_latex_basic(localizedTweetDate)
+                  + '}{'
+                  + escape_latex_basic(localizedTweetTime)
+                  + '}')
 
 # Wrap into tweet environment.
 
 latexText = htmlParser.unescape(latexText)
-latexText = '\\begin{tweet}' + latexText + '\\end{tweet}'
+latexText = ('\\begin{tweet}'
+                 + latexText
+                 + '\\end{tweet}')
 
 print(latexText.encode('utf-8'))
