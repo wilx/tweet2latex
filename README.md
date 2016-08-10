@@ -6,10 +6,15 @@ Run this from command line, e.g., like this:
 
     ./tweet2latex.py 762602474293321728 |tee tweet.tex
 
+The invocation above will download tweet's information as JSON and it will
+cache the JSON and downloaded images in current directory to avoid access
+rate limitations of Twitter API should this tool be invoked several times in
+succession.
+
 The contents of the `tweet.tex` might looks something like this:
 
 ```latex
-\begin{tweet}\tweetUserImage{https://pbs.twimg.com/profile\_images/683232086958993408/rnyugqzL\_normal.jpg}{rnyugqzL-normal.jpg}{701158958}\tweetUserName{701158958}{MedicNow}{MedicNow}It could be worse. You could be the lifeguard at the \tweetHashtag{Rio}{\#Rio} swimming pool.... \tweetHashtag{MondayMotivation}{\#MondayMotivation} \tweetPhoto{http://twitter.com/MedicNow/status/762602474293321728/photo/1}{https://pbs.twimg.com/media/CpVOzW7WEAAhMte.jpg}{CpVOzW7WEAAhMte.jpg}{https://t.co/AfoOoV9qQw}\tweetItself{762602474293321728}{Mon Aug 08 10:52:52 +0000 2016}\end{tweet}
+\begin{tweet}\tweetUserImage{https://pbs.twimg.com/profile\_images/683232086958993408/rnyugqzL\_normal.jpg}{rnyugqzL-normal.jpg}{701158958}\tweetUserName{701158958}{MedicNow}{MedicNow}It could be worse. You could be the lifeguard at the \tweetHashtag{Rio}{\#Rio} swimming pool.... \tweetHashtag{MondayMotivation}{\#MondayMotivation} \tweetPhoto{http://twitter.com/MedicNow/status/762602474293321728/photo/1}{https://pbs.twimg.com/media/CpVOzW7WEAAhMte.jpg}{CpVOzW7WEAAhMte.jpg}{https://t.co/AfoOoV9qQw}\tweetItself{762602474293321728}{Mon Aug 08 10:52:52 +0000 2016}{August 8, 2016}{12:52:52 PM GMT+2}\end{tweet}
 ```
 
 
@@ -35,9 +40,9 @@ Formatting of the tweet is up to you. See `tweet-document.tex` for example usage
   \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
   \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
   \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
-  \newcommand{\tweetItself}[2]{\flushright
-    \href{https://twitter.com/statuses/##1}{{\small \color{gray}##2}}}%
-  \begin{tcolorbox}[size=small,enhanced jigsaw,breakable]%
+  \newcommand{\tweetItself}[4]{\flushright
+    \href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
+  \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip]%
     \sffamily%
     \RaggedRight%
 }{\end{tcolorbox}}
