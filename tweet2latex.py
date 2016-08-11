@@ -271,6 +271,16 @@ latexText += ('\\tweetItself{'
                   + escape_latex_basic(localizedTweetTime)
                   + '}')
 
+# Tweet place.
+
+if 'place' in tj and tj['place'] is not None:
+    place = tj['place']
+    latexText += ('\\tweetPlace{'
+                      + escape_latex_basic(place.get('full_name', ''))
+                      + '}{'
+                      + escape_latex_basic(place.get('country'))
+                      + '}')
+
 # Wrap into tweet environment.
 
 latexText = htmlParser.unescape(latexText)

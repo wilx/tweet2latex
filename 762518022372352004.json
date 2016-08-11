@@ -1,0 +1,267 @@
+{
+  "contributors": null, 
+  "truncated": false, 
+  "text": "India's Urdu papers urge country's Muslims to wage #Jihad against non-Muslims ~ @TufailElif. https://t.co/elpMfZi8yV https://t.co/1HFD3khMuk", 
+  "is_quote_status": false, 
+  "in_reply_to_status_id": null, 
+  "id": 762518022372352004, 
+  "favorite_count": 162, 
+  "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>", 
+  "retweeted": false, 
+  "coordinates": null, 
+  "entities": {
+    "symbols": [], 
+    "user_mentions": [
+      {
+        "id": 21002587, 
+        "indices": [
+          80, 
+          91
+        ], 
+        "id_str": "21002587", 
+        "screen_name": "tufailelif", 
+        "name": "Tufail Ahmad"
+      }
+    ], 
+    "hashtags": [
+      {
+        "indices": [
+          51, 
+          57
+        ], 
+        "text": "Jihad"
+      }
+    ], 
+    "urls": [
+      {
+        "url": "https://t.co/elpMfZi8yV", 
+        "indices": [
+          93, 
+          116
+        ], 
+        "expanded_url": "http://www.openthemagazine.com/article/society/call-for-jihad#all", 
+        "display_url": "openthemagazine.com/article/societ\u2026"
+      }
+    ], 
+    "media": [
+      {
+        "expanded_url": "http://twitter.com/TarekFatah/status/762518022372352004/photo/1", 
+        "display_url": "pic.twitter.com/1HFD3khMuk", 
+        "url": "https://t.co/1HFD3khMuk", 
+        "media_url_https": "https://pbs.twimg.com/media/CpUCFe5WIAEuiNb.jpg", 
+        "id_str": "762518005125357569", 
+        "sizes": {
+          "small": {
+            "h": 680, 
+            "resize": "fit", 
+            "w": 610
+          }, 
+          "large": {
+            "h": 1203, 
+            "resize": "fit", 
+            "w": 1080
+          }, 
+          "medium": {
+            "h": 1200, 
+            "resize": "fit", 
+            "w": 1077
+          }, 
+          "thumb": {
+            "h": 150, 
+            "resize": "crop", 
+            "w": 150
+          }
+        }, 
+        "indices": [
+          117, 
+          140
+        ], 
+        "type": "photo", 
+        "id": 762518005125357569, 
+        "media_url": "http://pbs.twimg.com/media/CpUCFe5WIAEuiNb.jpg"
+      }
+    ]
+  }, 
+  "in_reply_to_screen_name": null, 
+  "in_reply_to_user_id": null, 
+  "retweet_count": 380, 
+  "id_str": "762518022372352004", 
+  "favorited": false, 
+  "user": {
+    "follow_request_sent": false, 
+    "has_extended_profile": true, 
+    "profile_use_background_image": true, 
+    "default_profile_image": false, 
+    "id": 17537467, 
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme12/bg.gif", 
+    "verified": true, 
+    "profile_text_color": "0C3E53", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/694970119831818240/X6SS1zC3_normal.jpg", 
+    "profile_sidebar_fill_color": "FFF7CC", 
+    "entities": {
+      "url": {
+        "urls": [
+          {
+            "url": "https://t.co/0Q9XV6ViKr", 
+            "indices": [
+              0, 
+              23
+            ], 
+            "expanded_url": "http://www.TarekFatah.com", 
+            "display_url": "TarekFatah.com"
+          }
+        ]
+      }, 
+      "description": {
+        "urls": []
+      }
+    }, 
+    "followers_count": 173207, 
+    "profile_sidebar_border_color": "F2E195", 
+    "id_str": "17537467", 
+    "profile_background_color": "BADFCD", 
+    "listed_count": 1737, 
+    "is_translation_enabled": false, 
+    "utc_offset": -14400, 
+    "statuses_count": 81851, 
+    "description": "Author, 'The Tragic Illusion of an Islamic State' (Wiley, 2008), 'The Jew is Not My Enemy' (Random, 2010) & 'The Hindu is Not My Enemy' (Kautilya Books, 2016)", 
+    "friends_count": 1588, 
+    "location": "Columnist, The Toronto Sun", 
+    "profile_link_color": "FF0000", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/694970119831818240/X6SS1zC3_normal.jpg", 
+    "following": true, 
+    "geo_enabled": true, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/17537467/1470344231", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme12/bg.gif", 
+    "screen_name": "TarekFatah", 
+    "lang": "en", 
+    "profile_background_tile": false, 
+    "favourites_count": 138, 
+    "name": "(((Tarek Fatah)))", 
+    "notifications": false, 
+    "url": "https://t.co/0Q9XV6ViKr", 
+    "created_at": "Fri Nov 21 14:51:32 +0000 2008", 
+    "contributors_enabled": false, 
+    "time_zone": "America/Toronto", 
+    "protected": false, 
+    "default_profile": false, 
+    "is_translator": false
+  }, 
+  "geo": null, 
+  "in_reply_to_user_id_str": null, 
+  "possibly_sensitive": false, 
+  "possibly_sensitive_appealable": false, 
+  "lang": "en", 
+  "created_at": "Mon Aug 08 05:17:18 +0000 2016", 
+  "in_reply_to_status_id_str": null, 
+  "place": {
+    "full_name": "Toronto, Ontario", 
+    "url": "https://api.twitter.com/1.1/geo/id/3797791ff9c0e4c6.json", 
+    "country": "Canada", 
+    "place_type": "city", 
+    "bounding_box": {
+      "type": "Polygon", 
+      "coordinates": [
+        [
+          [
+            -79.639319, 
+            43.403221
+          ], 
+          [
+            -78.90582, 
+            43.403221
+          ], 
+          [
+            -78.90582, 
+            43.855401
+          ], 
+          [
+            -79.639319, 
+            43.855401
+          ]
+        ]
+      ]
+    }, 
+    "contained_within": [], 
+    "country_code": "CA", 
+    "attributes": {}, 
+    "id": "3797791ff9c0e4c6", 
+    "name": "Toronto"
+  }, 
+  "extended_entities": {
+    "media": [
+      {
+        "expanded_url": "http://twitter.com/TarekFatah/status/762518022372352004/photo/1", 
+        "display_url": "pic.twitter.com/1HFD3khMuk", 
+        "url": "https://t.co/1HFD3khMuk", 
+        "media_url_https": "https://pbs.twimg.com/media/CpUCFe5WIAEuiNb.jpg", 
+        "id_str": "762518005125357569", 
+        "sizes": {
+          "small": {
+            "h": 680, 
+            "resize": "fit", 
+            "w": 610
+          }, 
+          "large": {
+            "h": 1203, 
+            "resize": "fit", 
+            "w": 1080
+          }, 
+          "medium": {
+            "h": 1200, 
+            "resize": "fit", 
+            "w": 1077
+          }, 
+          "thumb": {
+            "h": 150, 
+            "resize": "crop", 
+            "w": 150
+          }
+        }, 
+        "indices": [
+          117, 
+          140
+        ], 
+        "type": "photo", 
+        "id": 762518005125357569, 
+        "media_url": "http://pbs.twimg.com/media/CpUCFe5WIAEuiNb.jpg"
+      }, 
+      {
+        "expanded_url": "http://twitter.com/TarekFatah/status/762518022372352004/photo/1", 
+        "display_url": "pic.twitter.com/1HFD3khMuk", 
+        "url": "https://t.co/1HFD3khMuk", 
+        "media_url_https": "https://pbs.twimg.com/media/CpUCGBMWcAACgoF.jpg", 
+        "id_str": "762518014331875328", 
+        "sizes": {
+          "large": {
+            "h": 1511, 
+            "resize": "fit", 
+            "w": 1070
+          }, 
+          "small": {
+            "h": 680, 
+            "resize": "fit", 
+            "w": 482
+          }, 
+          "medium": {
+            "h": 1200, 
+            "resize": "fit", 
+            "w": 850
+          }, 
+          "thumb": {
+            "h": 150, 
+            "resize": "crop", 
+            "w": 150
+          }
+        }, 
+        "indices": [
+          117, 
+          140
+        ], 
+        "type": "photo", 
+        "id": 762518014331875328, 
+        "media_url": "http://pbs.twimg.com/media/CpUCGBMWcAACgoF.jpg"
+      }
+    ]
+  }
+}
