@@ -154,9 +154,9 @@ if entitiesDict is not None:
         end = urlRec['indices'][1]
         assert start not in decorationsStart
         decorationsStart[start] = ('\\tweetUrl{'
-                                       + urlRec['url']
+                                       + escape_latex_basic(urlRec['url'])
                                        + '}{'
-                                       + urlRec['expanded_url']
+                                       + escape_latex_basic(urlRec['expanded_url'])
                                        + '}{'
                                        + escape_latex_basic(urlRec['display_url'])
                                        + '}{')
@@ -223,7 +223,10 @@ for i in xrange(0,len(tweetText)):
     if i in decorationsStart:
         latexText += decorationsStart[i]
 
-    latexText += escape_latex_basic(ch)
+    if ch == '~':
+        latexText += '\\char`\\~{}'
+    else:
+        latexText += escape_latex_basic(ch)
 
 if i + 1 in decorationsEnds:
     latexText += decorationsEnds[i + 1]
