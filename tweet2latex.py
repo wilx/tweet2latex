@@ -6,6 +6,7 @@ Fetch a single tweet as JSON using its id and output LaTeX.
 from __future__ import print_function
 
 import os
+import re
 import json
 import twarc
 import argparse
@@ -67,7 +68,7 @@ def tweak_filename(str):
     return str.replace('_', '-')
 
 def check_file_viable(filename):
-    return os.path.isfile(tweetJsonFile) and os.path.getsize(tweetJsonFile) > 0
+    return os.path.isfile(filename) and os.path.getsize(filename) > 0
 
 
 e = os.environ.get
@@ -187,6 +188,7 @@ if entitiesDict is not None:
 latexText = u''
 
 url = tj['user']['profile_image_url_https']
+url = re.sub(r"_normal(?=\.[^.]+$)", "_bigger", url)
 filename = url.split('/')[-1].split('#')[0].split('?')[0]
 filename = tweak_filename(filename)
 if not check_file_viable(filename):
