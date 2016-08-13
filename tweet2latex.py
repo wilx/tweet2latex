@@ -60,7 +60,8 @@ def default_config_filename():
 def escape_latex_basic(str):
     tmp = u''
     for ch in str:
-        if ch == '_' or ch == '#' or ch == '\\' or ch == '%' or ch == '^':
+        if (ch == '_' or ch == '#' or ch == '\\' or ch == '%' or ch == '^'
+                or ch == '{' or ch == '}'):
             tmp += '\\'
         tmp += ch
     return tmp
@@ -226,6 +227,8 @@ for i in xrange(0,len(tweetText)):
 
     if ch == '~':
         latexText += '\\char`\\~{}'
+    elif ch == "\n":
+        latexText += "\\hfill\\break\n\\null{}"
     else:
         latexText += escape_latex_basic(ch)
 
