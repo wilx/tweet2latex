@@ -7,6 +7,7 @@ from __future__ import print_function
 
 import os
 import re
+import regex
 import json
 import twarc
 import argparse
@@ -230,6 +231,12 @@ for i in xrange(0,len(tweetText)):
 
 if i + 1 in decorationsEnds:
     latexText += decorationsEnds[i + 1]
+
+# Wrap emoji characters with switch to emoji containing font.
+
+latexText = regex.sub(ur"(\p{Emoticons}+)", ur"{\\emojifont \g<1>}", latexText,
+                          regex.V1)
+#latexText = regex.subf(r"(\p{Emoticons}+)", "\{\\emojifont {1}\}", latexText)
 
 # Add date with link to the tweet itself.
 

@@ -27,10 +27,15 @@
 \ifxetex
 \usepackage{xeCJK}
 \setCJKfamilyfont{jarm}{Noto Sans CJK JP}
+
+%% The following breaks Japanese text.
+%\usepackage{ucharclasses}
+%\setTransitionTo{Emoticons}{\begingroup \fontspec{Symbola} }
+%\setTransitionFrom{Emoticons}{\endgroup }
 \else
 \usepackage{luatexja-fontspec}
 \usepackage{luatexja-preset}
-\setmainjfont{Noto Sans CJK JP}
+\setmainjfont{Noto Sans CJK JP}[Scale=MatchUppercase]
 \fi
 
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
@@ -59,9 +64,9 @@
   \newcommand{\tweetItself}[4]{\flushright
     \href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
   \newcommand{\tweetPlace}[2]{\flushright {\small \color{gray}##1, ##2}}%
-  \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip]%
+  \newfontfamily\emojifont{Symbola}[Scale=MatchUppercase]%
+  \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip,halign=flush left]%
     \sffamily%
-    \RaggedRight%
 }{\end{tcolorbox}}
 
 % This allows line breaks in URL in more places.
@@ -118,5 +123,7 @@ Still not satisfied?
 \input{tweet13}
 
 \input{tweet14}
+
+\input{tweet15}
 
 \end{document}
