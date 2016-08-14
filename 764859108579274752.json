@@ -1,0 +1,212 @@
+{
+  "contributors": null, 
+  "coordinates": null, 
+  "created_at": "Sun Aug 14 16:19:56 +0000 2016", 
+  "entities": {
+    "hashtags": [
+      {
+        "indices": [
+          68, 
+          75
+        ], 
+        "text": "Bronze"
+      }, 
+      {
+        "indices": [
+          94, 
+          104
+        ], 
+        "text": "czechteam"
+      }, 
+      {
+        "indices": [
+          107, 
+          114
+        ], 
+        "text": "Tennis"
+      }
+    ], 
+    "media": [
+      {
+        "display_url": "pic.twitter.com/uPjhqXsrIS", 
+        "expanded_url": "http://twitter.com/sportCT/status/764859108579274752/photo/1", 
+        "id": 764858471279955968, 
+        "id_str": "764858471279955968", 
+        "indices": [
+          115, 
+          138
+        ], 
+        "media_url": "http://pbs.twimg.com/media/Cp1SuiwXEAAVvGD.jpg", 
+        "media_url_https": "https://pbs.twimg.com/media/Cp1SuiwXEAAVvGD.jpg", 
+        "sizes": {
+          "large": {
+            "h": 1080, 
+            "resize": "fit", 
+            "w": 1080
+          }, 
+          "medium": {
+            "h": 1080, 
+            "resize": "fit", 
+            "w": 1080
+          }, 
+          "small": {
+            "h": 680, 
+            "resize": "fit", 
+            "w": 680
+          }, 
+          "thumb": {
+            "h": 150, 
+            "resize": "crop", 
+            "w": 150
+          }
+        }, 
+        "type": "photo", 
+        "url": "https://t.co/uPjhqXsrIS"
+      }
+    ], 
+    "symbols": [], 
+    "urls": [], 
+    "user_mentions": [
+      {
+        "id": 1465525608, 
+        "id_str": "1465525608", 
+        "indices": [
+          40, 
+          49
+        ], 
+        "name": "stepec78", 
+        "screen_name": "stepec78"
+      }, 
+      {
+        "id": 89692547, 
+        "id_str": "89692547", 
+        "indices": [
+          52, 
+          62
+        ], 
+        "name": "Lucie Hradecka", 
+        "screen_name": "lucik2105"
+      }
+    ]
+  }, 
+  "extended_entities": {
+    "media": [
+      {
+        "display_url": "pic.twitter.com/uPjhqXsrIS", 
+        "expanded_url": "http://twitter.com/sportCT/status/764859108579274752/photo/1", 
+        "id": 764858471279955968, 
+        "id_str": "764858471279955968", 
+        "indices": [
+          115, 
+          138
+        ], 
+        "media_url": "http://pbs.twimg.com/media/Cp1SuiwXEAAVvGD.jpg", 
+        "media_url_https": "https://pbs.twimg.com/media/Cp1SuiwXEAAVvGD.jpg", 
+        "sizes": {
+          "large": {
+            "h": 1080, 
+            "resize": "fit", 
+            "w": 1080
+          }, 
+          "medium": {
+            "h": 1080, 
+            "resize": "fit", 
+            "w": 1080
+          }, 
+          "small": {
+            "h": 680, 
+            "resize": "fit", 
+            "w": 680
+          }, 
+          "thumb": {
+            "h": 150, 
+            "resize": "crop", 
+            "w": 150
+          }
+        }, 
+        "type": "photo", 
+        "url": "https://t.co/uPjhqXsrIS"
+      }
+    ]
+  }, 
+  "favorite_count": 109, 
+  "favorited": false, 
+  "geo": null, 
+  "id": 764859108579274752, 
+  "id_str": "764859108579274752", 
+  "in_reply_to_screen_name": null, 
+  "in_reply_to_status_id": null, 
+  "in_reply_to_status_id_str": null, 
+  "in_reply_to_user_id": null, 
+  "in_reply_to_user_id_str": null, 
+  "is_quote_status": false, 
+  "lang": "cs", 
+  "place": null, 
+  "possibly_sensitive": false, 
+  "possibly_sensitive_appealable": false, 
+  "retweet_count": 31, 
+  "retweeted": false, 
+  "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>", 
+  "text": "T\u0159et\u00ed medaile z tenisov\u00fdch kurt\u016f v Riu! @stepec78 a @lucik2105 maj\u00ed #Bronze, gratulujeme! \ud83d\udc4f\ud83d\udc4d\ud83d\udc4f\n#czechteam\ud83c\udde8\ud83c\uddff #Tennis https://t.co/uPjhqXsrIS", 
+  "truncated": false, 
+  "user": {
+    "contributors_enabled": false, 
+    "created_at": "Tue Jul 19 22:44:22 +0000 2011", 
+    "default_profile": false, 
+    "default_profile_image": false, 
+    "description": "Ofici\u00e1ln\u00ed \u00fa\u010det \u010cT sport na Twitteru - aktu\u00e1ln\u00ed v\u00fdsledky, informace ze z\u00e1kulis\u00ed, tipy na sportovn\u00ed po\u0159ady, report\u00e1\u017ee...", 
+    "entities": {
+      "description": {
+        "urls": []
+      }, 
+      "url": {
+        "urls": [
+          {
+            "display_url": "ctsport.cz", 
+            "expanded_url": "http://ctsport.cz", 
+            "indices": [
+              0, 
+              22
+            ], 
+            "url": "http://t.co/faBSOt6b6e"
+          }
+        ]
+      }
+    }, 
+    "favourites_count": 122, 
+    "follow_request_sent": false, 
+    "followers_count": 163114, 
+    "following": false, 
+    "friends_count": 364, 
+    "geo_enabled": true, 
+    "has_extended_profile": false, 
+    "id": 338672002, 
+    "id_str": "338672002", 
+    "is_translation_enabled": false, 
+    "is_translator": false, 
+    "lang": "cs", 
+    "listed_count": 278, 
+    "location": "Praha, Kav\u010d\u00ed hory", 
+    "name": "\u010cT sport", 
+    "notifications": false, 
+    "profile_background_color": "E8F5FB", 
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/437987160923189248/uS03FuYo.jpeg", 
+    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/437987160923189248/uS03FuYo.jpeg", 
+    "profile_background_tile": false, 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/338672002/1470151185", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/661920080092127232/8omkVgyg_normal.png", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/661920080092127232/8omkVgyg_normal.png", 
+    "profile_link_color": "32BA00", 
+    "profile_sidebar_border_color": "FFFFFF", 
+    "profile_sidebar_fill_color": "FAFAFA", 
+    "profile_text_color": "000000", 
+    "profile_use_background_image": true, 
+    "protected": false, 
+    "screen_name": "sportCT", 
+    "statuses_count": 19897, 
+    "time_zone": "Prague", 
+    "url": "http://t.co/faBSOt6b6e", 
+    "utc_offset": 7200, 
+    "verified": false
+  }
+}

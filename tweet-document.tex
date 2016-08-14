@@ -2,7 +2,6 @@
 \usepackage[paper=A4,DIV=calc,twocolumn]{typearea}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fontspec}
-\usepackage{microtype}
 \usepackage{graphicx,grffile}
 \usepackage{etoolbox}
 \usepackage[unicode=true]{hyperref}
@@ -37,6 +36,8 @@
 \usepackage{luatexja-preset}
 \setmainjfont{Noto Sans CJK JP}[Scale=MatchUppercase]
 \fi
+
+\usepackage{microtype}
 
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 
@@ -128,6 +129,10 @@ Still not satisfied?
 
 \input{tweet16}
 
+This tweet is hilarious:
 \input{tweet17}
+
+\section{Not stopping here!}\label{not-stopping-here}%
+\input{tweet18}
 
 \end{document}
