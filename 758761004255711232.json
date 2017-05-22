@@ -22,7 +22,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/j8Q4mUlrWy", 
-        "expanded_url": "http://twitter.com/samriegel/status/758761004255711232/photo/1", 
+        "expanded_url": "https://twitter.com/samriegel/status/758761004255711232/photo/1", 
         "id": 758760999113535488, 
         "id_str": "758760999113535488", 
         "indices": [
@@ -65,7 +65,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/j8Q4mUlrWy", 
-        "expanded_url": "http://twitter.com/samriegel/status/758761004255711232/photo/1", 
+        "expanded_url": "https://twitter.com/samriegel/status/758761004255711232/photo/1", 
         "id": 758760999113535488, 
         "id_str": "758760999113535488", 
         "indices": [
@@ -101,7 +101,7 @@
       }
     ]
   }, 
-  "favorite_count": 2066, 
+  "favorite_count": 2075, 
   "favorited": true, 
   "geo": null, 
   "id": 758761004255711232, 
@@ -116,7 +116,7 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 312, 
+  "retweet_count": 316, 
   "retweeted": true, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
   "text": "#ShirtCeption continues.... tonight! #CriticalRole https://t.co/j8Q4mUlrWy", 
@@ -126,7 +126,7 @@
     "created_at": "Tue Sep 25 02:57:09 +0000 2007", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "Scanlan Shorthalt on #CriticalRole, VO Director for #Croods, #SofiatheFirst, #SanjayandCraig, #WanderOverYonder, #PickleandPeanut, mama's boy", 
+    "description": "I work on cartoons like #ElenaOfAvalor #Home #PickleandPeanut #FutureWorm #SofiatheFirst & #DuckTales. I play D&D on #CriticalRole. I bathe infrequently.", 
     "entities": {
       "description": {
         "urls": []
@@ -145,19 +145,19 @@
         ]
       }
     }, 
-    "favourites_count": 5584, 
+    "favourites_count": 7200, 
     "follow_request_sent": false, 
-    "followers_count": 47842, 
+    "followers_count": 80624, 
     "following": true, 
-    "friends_count": 346, 
+    "friends_count": 381, 
     "geo_enabled": false, 
-    "has_extended_profile": false, 
+    "has_extended_profile": true, 
     "id": 9083222, 
     "id_str": "9083222", 
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 577, 
+    "listed_count": 780, 
     "location": "El Ay", 
     "name": "Sam Riegel", 
     "notifications": false, 
@@ -165,9 +165,9 @@
     "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/18285748/DSC00230.JPG", 
     "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/18285748/DSC00230.JPG", 
     "profile_background_tile": true, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/9083222/1464648969", 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/760573971171381248/m4Oldb49_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/760573971171381248/m4Oldb49_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/9083222/1486397197", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/855514770832637952/0ovfjCrt_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/855514770832637952/0ovfjCrt_normal.jpg", 
     "profile_link_color": "9266CC", 
     "profile_sidebar_border_color": "F2E195", 
     "profile_sidebar_fill_color": "FFF7CC", 
@@ -175,10 +175,11 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "samriegel", 
-    "statuses_count": 11640, 
+    "statuses_count": 13327, 
     "time_zone": "Pacific Time (US & Canada)", 
+    "translator_type": "none", 
     "url": "https://t.co/o3olzfmwQN", 
     "utc_offset": -25200, 
-    "verified": false
+    "verified": true
   }
 }

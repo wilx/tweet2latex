@@ -8,7 +8,7 @@
     "urls": [], 
     "user_mentions": []
   }, 
-  "favorite_count": 2667, 
+  "favorite_count": 3076, 
   "favorited": false, 
   "geo": null, 
   "id": 762678098206814208, 
@@ -21,7 +21,7 @@
   "is_quote_status": false, 
   "lang": "en", 
   "place": null, 
-  "retweet_count": 1012, 
+  "retweet_count": 1153, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
   "text": "\"Can I borrow you for two minutes?\"\n\nWondering what would happen if you said no", 
@@ -31,25 +31,34 @@
     "created_at": "Wed Dec 19 23:12:45 +0000 2012", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "Making life awkward for ourselves one rainy day at a time \u2022 Get the Very British Problems book here: https://t.co/2pcdEvUKtA \u2022 Shirts: https://t.co/mcTVkEb1Nw", 
+    "description": "Very British Problems books: https://t.co/s6dusqHJtC & https://t.co/ENuC0VvKsZ \u2022 TV show: @netflix \u2022 Shirts: https://t.co/mcTVkEb1Nw", 
     "entities": {
       "description": {
         "urls": [
           {
-            "display_url": "amzn.to/21cuuwo", 
-            "expanded_url": "http://amzn.to/21cuuwo", 
+            "display_url": "amzn.to/1NlMpwq", 
+            "expanded_url": "http://amzn.to/1NlMpwq", 
             "indices": [
-              101, 
-              124
+              29, 
+              52
             ], 
-            "url": "https://t.co/2pcdEvUKtA"
+            "url": "https://t.co/s6dusqHJtC"
+          }, 
+          {
+            "display_url": "amzn.to/2dVpqfu", 
+            "expanded_url": "http://amzn.to/2dVpqfu", 
+            "indices": [
+              55, 
+              78
+            ], 
+            "url": "https://t.co/ENuC0VvKsZ"
           }, 
           {
             "display_url": "verybritishproblems.teemill.co.uk", 
             "expanded_url": "http://verybritishproblems.teemill.co.uk", 
             "indices": [
-              135, 
-              158
+              109, 
+              132
             ], 
             "url": "https://t.co/mcTVkEb1Nw"
           }
@@ -69,11 +78,11 @@
         ]
       }
     }, 
-    "favourites_count": 1445, 
+    "favourites_count": 1497, 
     "follow_request_sent": false, 
-    "followers_count": 1349057, 
+    "followers_count": 2147873, 
     "following": true, 
-    "friends_count": 2, 
+    "friends_count": 1, 
     "geo_enabled": false, 
     "has_extended_profile": false, 
     "id": 1023072078, 
@@ -81,7 +90,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 4854, 
+    "listed_count": 5314, 
     "location": "", 
     "name": "VeryBritishProblems", 
     "notifications": false, 
@@ -89,7 +98,7 @@
     "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000078388207/476571d862157b41c1e5bf0cd9ba8ede.jpeg", 
     "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000078388207/476571d862157b41c1e5bf0cd9ba8ede.jpeg", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1023072078/1450115042", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1023072078/1476951805", 
     "profile_image_url": "http://pbs.twimg.com/profile_images/2996456104/b707959f192bba5c31c07058f91a183b_normal.png", 
     "profile_image_url_https": "https://pbs.twimg.com/profile_images/2996456104/b707959f192bba5c31c07058f91a183b_normal.png", 
     "profile_link_color": "009999", 
@@ -99,8 +108,9 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "SoVeryBritish", 
-    "statuses_count": 2420, 
+    "statuses_count": 3032, 
     "time_zone": null, 
+    "translator_type": "none", 
     "url": "https://t.co/XEtPZkOPPP", 
     "utc_offset": null, 
     "verified": true

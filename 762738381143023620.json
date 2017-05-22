@@ -29,7 +29,7 @@
       }
     ]
   }, 
-  "favorite_count": 7, 
+  "favorite_count": 6, 
   "favorited": false, 
   "geo": null, 
   "id": 762738381143023620, 
@@ -62,22 +62,22 @@
       "url": {
         "urls": [
           {
-            "display_url": "static1.squarespace.com/static/5488a9e\u2026", 
-            "expanded_url": "http://static1.squarespace.com/static/5488a9e6e4b0563d5788db1a/t/57617e681bbee06509da8cf1/1466007145", 
+            "display_url": "bit.ly/2gP4lTw", 
+            "expanded_url": "http://bit.ly/2gP4lTw", 
             "indices": [
               0, 
               23
             ], 
-            "url": "https://t.co/vjCWZeAOC3"
+            "url": "https://t.co/jL4i6CoHUr"
           }
         ]
       }
     }, 
-    "favourites_count": 505, 
+    "favourites_count": 962, 
     "follow_request_sent": false, 
-    "followers_count": 1123, 
+    "followers_count": 1255, 
     "following": false, 
-    "friends_count": 702, 
+    "friends_count": 806, 
     "geo_enabled": false, 
     "has_extended_profile": false, 
     "id": 1857463891, 
@@ -85,7 +85,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 88, 
+    "listed_count": 124, 
     "location": "Europe", 
     "name": "Sean Carney", 
     "notifications": false, 
@@ -103,9 +103,10 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "SeanBCarney", 
-    "statuses_count": 2050, 
+    "statuses_count": 2580, 
     "time_zone": "Belgrade", 
-    "url": "https://t.co/vjCWZeAOC3", 
+    "translator_type": "none", 
+    "url": "https://t.co/jL4i6CoHUr", 
     "utc_offset": 7200, 
     "verified": false
   }

@@ -29,7 +29,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/uPjhqXsrIS", 
-        "expanded_url": "http://twitter.com/sportCT/status/764859108579274752/photo/1", 
+        "expanded_url": "https://twitter.com/sportCT/status/764859108579274752/photo/1", 
         "id": 764858471279955968, 
         "id_str": "764858471279955968", 
         "indices": [
@@ -93,7 +93,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/uPjhqXsrIS", 
-        "expanded_url": "http://twitter.com/sportCT/status/764859108579274752/photo/1", 
+        "expanded_url": "https://twitter.com/sportCT/status/764859108579274752/photo/1", 
         "id": 764858471279955968, 
         "id_str": "764858471279955968", 
         "indices": [
@@ -129,7 +129,7 @@
       }
     ]
   }, 
-  "favorite_count": 109, 
+  "favorite_count": 181, 
   "favorited": false, 
   "geo": null, 
   "id": 764859108579274752, 
@@ -144,7 +144,7 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 31, 
+  "retweet_count": 43, 
   "retweeted": false, 
   "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>", 
   "text": "T\u0159et\u00ed medaile z tenisov\u00fdch kurt\u016f v Riu! @stepec78 a @lucik2105 maj\u00ed #Bronze, gratulujeme! \ud83d\udc4f\ud83d\udc4d\ud83d\udc4f\n#czechteam\ud83c\udde8\ud83c\uddff #Tennis https://t.co/uPjhqXsrIS", 
@@ -173,11 +173,11 @@
         ]
       }
     }, 
-    "favourites_count": 122, 
+    "favourites_count": 252, 
     "follow_request_sent": false, 
-    "followers_count": 163114, 
+    "followers_count": 197063, 
     "following": false, 
-    "friends_count": 364, 
+    "friends_count": 357, 
     "geo_enabled": true, 
     "has_extended_profile": false, 
     "id": 338672002, 
@@ -185,7 +185,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "cs", 
-    "listed_count": 278, 
+    "listed_count": 319, 
     "location": "Praha, Kav\u010d\u00ed hory", 
     "name": "\u010cT sport", 
     "notifications": false, 
@@ -193,7 +193,7 @@
     "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/437987160923189248/uS03FuYo.jpeg", 
     "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/437987160923189248/uS03FuYo.jpeg", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/338672002/1470151185", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/338672002/1495451528", 
     "profile_image_url": "http://pbs.twimg.com/profile_images/661920080092127232/8omkVgyg_normal.png", 
     "profile_image_url_https": "https://pbs.twimg.com/profile_images/661920080092127232/8omkVgyg_normal.png", 
     "profile_link_color": "32BA00", 
@@ -203,8 +203,9 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "sportCT", 
-    "statuses_count": 19897, 
+    "statuses_count": 30128, 
     "time_zone": "Prague", 
+    "translator_type": "none", 
     "url": "http://t.co/faBSOt6b6e", 
     "utc_offset": 7200, 
     "verified": false

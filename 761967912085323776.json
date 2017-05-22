@@ -8,7 +8,7 @@
     "urls": [], 
     "user_mentions": []
   }, 
-  "favorite_count": 1461, 
+  "favorite_count": 3987, 
   "favorited": true, 
   "geo": null, 
   "id": 761967912085323776, 
@@ -21,7 +21,7 @@
   "is_quote_status": false, 
   "lang": "en", 
   "place": null, 
-  "retweet_count": 910, 
+  "retweet_count": 2083, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>", 
   "text": "FOOD SCIENTIST: we bred this corn to have less rigid stoma\nME: Stoma?\nFS: Pores for breathing essentially\nME: So this is...soft pore corn?", 
@@ -31,27 +31,27 @@
     "created_at": "Sat Nov 30 05:22:16 +0000 2013", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "Half ironic wordplay, half wit.  https://t.co/48tYjM9wVR\u2026\nhttps://t.co/vlZrsoLUob\u2026", 
+    "description": "Half ironic wordplay, half wit. Main entry on https://t.co/pO7LYLgo9H\nhttps://t.co/ZLWFaTnHWQ", 
     "entities": {
       "description": {
         "urls": [
           {
-            "display_url": "telegraph.co.uk/technology/201", 
-            "expanded_url": "http://telegraph.co.uk/technology/201", 
+            "display_url": "Slickipedia.org", 
+            "expanded_url": "http://Slickipedia.org", 
             "indices": [
-              33, 
-              56
+              46, 
+              69
             ], 
-            "url": "https://t.co/48tYjM9wVR"
+            "url": "https://t.co/pO7LYLgo9H"
           }, 
           {
-            "display_url": "buzzfeed.com/awesomer/tweet", 
-            "expanded_url": "http://buzzfeed.com/awesomer/tweet", 
+            "display_url": "bzfd.it/28VEpTZ", 
+            "expanded_url": "http://bzfd.it/28VEpTZ", 
             "indices": [
-              58, 
-              81
+              70, 
+              93
             ], 
-            "url": "https://t.co/vlZrsoLUob"
+            "url": "https://t.co/ZLWFaTnHWQ"
           }
         ]
       }, 
@@ -69,11 +69,11 @@
         ]
       }
     }, 
-    "favourites_count": 41518, 
+    "favourites_count": 50166, 
     "follow_request_sent": false, 
-    "followers_count": 20218, 
+    "followers_count": 22179, 
     "following": false, 
-    "friends_count": 218, 
+    "friends_count": 237, 
     "geo_enabled": false, 
     "has_extended_profile": false, 
     "id": 2201329547, 
@@ -81,17 +81,17 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 451, 
+    "listed_count": 479, 
     "location": "", 
-    "name": "The Ellympics are on", 
+    "name": "Elle Oh Hell", 
     "notifications": false, 
     "profile_background_color": "002559", 
     "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/560852744479571969/Nx41bsDP.jpeg", 
     "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/560852744479571969/Nx41bsDP.jpeg", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2201329547/1428545975", 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/722655815656714240/D0zQPhwf_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/722655815656714240/D0zQPhwf_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2201329547/1494474184", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/833104828385619977/HdV_Ik9h_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/833104828385619977/HdV_Ik9h_normal.jpg", 
     "profile_link_color": "002559", 
     "profile_sidebar_border_color": "FFFFFF", 
     "profile_sidebar_fill_color": "DDEEF6", 
@@ -99,8 +99,9 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "ElleOhHell", 
-    "statuses_count": 14984, 
+    "statuses_count": 17650, 
     "time_zone": null, 
+    "translator_type": "none", 
     "url": "https://t.co/MApnPWHiEL", 
     "utc_offset": null, 
     "verified": false

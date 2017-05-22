@@ -22,7 +22,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/YuKy2rcjyU", 
-        "expanded_url": "http://twitter.com/Interior/status/463440424141459456/photo/1", 
+        "expanded_url": "https://twitter.com/Interior/status/463440424141459456/photo/1", 
         "id": 463440423352950784, 
         "id_str": "463440423352950784", 
         "indices": [
@@ -76,7 +76,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/YuKy2rcjyU", 
-        "expanded_url": "http://twitter.com/Interior/status/463440424141459456/photo/1", 
+        "expanded_url": "https://twitter.com/Interior/status/463440424141459456/photo/1", 
         "id": 463440423352950784, 
         "id_str": "463440423352950784", 
         "indices": [
@@ -112,7 +112,7 @@
       }
     ]
   }, 
-  "favorite_count": 2287, 
+  "favorite_count": 3390, 
   "favorited": false, 
   "geo": null, 
   "id": 463440424141459456, 
@@ -127,7 +127,7 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 1761, 
+  "retweet_count": 2415, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
   "text": "Sunsets don't get much better than this one over @GrandTetonNPS. #nature #sunset http://t.co/YuKy2rcjyU", 
@@ -156,11 +156,11 @@
         ]
       }
     }, 
-    "favourites_count": 1855, 
+    "favourites_count": 2672, 
     "follow_request_sent": false, 
-    "followers_count": 1179644, 
+    "followers_count": 3326137, 
     "following": false, 
-    "friends_count": 261075, 
+    "friends_count": 224511, 
     "geo_enabled": true, 
     "has_extended_profile": true, 
     "id": 76348185, 
@@ -168,7 +168,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 6416, 
+    "listed_count": 7193, 
     "location": "Washington, DC", 
     "name": "US Dept of Interior", 
     "notifications": false, 
@@ -176,7 +176,7 @@
     "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/688410897/0390727e0b833fa7f8536a100da185fa.jpeg", 
     "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/688410897/0390727e0b833fa7f8536a100da185fa.jpeg", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/76348185/1459457192", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/76348185/1493749877", 
     "profile_image_url": "http://pbs.twimg.com/profile_images/432081479/DOI_LOGO_normal.jpg", 
     "profile_image_url_https": "https://pbs.twimg.com/profile_images/432081479/DOI_LOGO_normal.jpg", 
     "profile_link_color": "1F98C7", 
@@ -186,8 +186,9 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "Interior", 
-    "statuses_count": 13061, 
+    "statuses_count": 16075, 
     "time_zone": "Eastern Time (US & Canada)", 
+    "translator_type": "none", 
     "url": "http://t.co/gUty7d4LZ8", 
     "utc_offset": -14400, 
     "verified": true

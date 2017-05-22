@@ -7,7 +7,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/3CQpPTtRVK", 
-        "expanded_url": "http://twitter.com/AcademiaObscura/status/740735235726413824/photo/1", 
+        "expanded_url": "https://twitter.com/AcademiaObscura/status/740735235726413824/photo/1", 
         "id": 740735233218072576, 
         "id_str": "740735233218072576", 
         "indices": [
@@ -50,7 +50,7 @@
     "media": [
       {
         "display_url": "pic.twitter.com/3CQpPTtRVK", 
-        "expanded_url": "http://twitter.com/AcademiaObscura/status/740735235726413824/photo/1", 
+        "expanded_url": "https://twitter.com/AcademiaObscura/status/740735235726413824/photo/1", 
         "id": 740735233218072576, 
         "id_str": "740735233218072576", 
         "indices": [
@@ -86,7 +86,7 @@
       }
     ]
   }, 
-  "favorite_count": 284, 
+  "favorite_count": 290, 
   "favorited": true, 
   "geo": null, 
   "id": 740735235726413824, 
@@ -101,7 +101,7 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 178, 
+  "retweet_count": 175, 
   "retweeted": false, 
   "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>", 
   "text": "Interdisciplinary works are my favourite. https://t.co/3CQpPTtRVK", 
@@ -111,18 +111,18 @@
     "created_at": "Mon Jul 14 14:45:27 +0000 2014", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "The Hidden Silly Side of Higher Education. | Book coming soon https://t.co/jruaEydZCd", 
+    "description": "The hidden silly side of higher education. | Book coming soon: https://t.co/sDYIAfJFXt", 
     "entities": {
       "description": {
         "urls": [
           {
-            "display_url": "unbound.co.uk/books/academia\u2026", 
-            "expanded_url": "https://unbound.co.uk/books/academia-obscura", 
+            "display_url": "unbound.com/books/academia\u2026", 
+            "expanded_url": "https://unbound.com/books/academia-obscura", 
             "indices": [
-              62, 
-              85
+              63, 
+              86
             ], 
-            "url": "https://t.co/jruaEydZCd"
+            "url": "https://t.co/sDYIAfJFXt"
           }
         ]
       }, 
@@ -140,11 +140,11 @@
         ]
       }
     }, 
-    "favourites_count": 8711, 
+    "favourites_count": 8056, 
     "follow_request_sent": false, 
-    "followers_count": 38798, 
+    "followers_count": 72696, 
     "following": false, 
-    "friends_count": 175, 
+    "friends_count": 151, 
     "geo_enabled": true, 
     "has_extended_profile": false, 
     "id": 2645602164, 
@@ -152,26 +152,27 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 805, 
-    "location": "The Groves of Academe", 
+    "listed_count": 1207, 
+    "location": "The Grooves of Academe", 
     "name": "Academia Obscura", 
     "notifications": false, 
     "profile_background_color": "000000", 
     "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2645602164/1405350917", 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/705781512587837442/piaR7if6_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/705781512587837442/piaR7if6_normal.jpg", 
-    "profile_link_color": "B12930", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2645602164/1483050628", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/860084364587225089/DcVKaNCC_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/860084364587225089/DcVKaNCC_normal.jpg", 
+    "profile_link_color": "C5313D", 
     "profile_sidebar_border_color": "000000", 
     "profile_sidebar_fill_color": "000000", 
     "profile_text_color": "000000", 
     "profile_use_background_image": false, 
     "protected": false, 
     "screen_name": "AcademiaObscura", 
-    "statuses_count": 1711, 
+    "statuses_count": 1927, 
     "time_zone": "Paris", 
+    "translator_type": "none", 
     "url": "https://t.co/M7qMRGxfzf", 
     "utc_offset": 7200, 
     "verified": false

@@ -18,7 +18,7 @@
     ], 
     "user_mentions": []
   }, 
-  "favorite_count": 3, 
+  "favorite_count": 2, 
   "favorited": false, 
   "geo": null, 
   "id": 762750641475321856, 
@@ -43,30 +43,17 @@
     "created_at": "Wed Jun 17 10:41:29 +0000 2015", 
     "default_profile": true, 
     "default_profile_image": false, 
-    "description": "If you live in the West and you can read this you're not oppressed", 
+    "description": "I sexually identify as 2 large number 9's with extra dip, the triangle button from the PS1 controller, and the letter 'C'", 
     "entities": {
       "description": {
         "urls": []
-      }, 
-      "url": {
-        "urls": [
-          {
-            "display_url": "tylikessalad.com", 
-            "expanded_url": "http://tylikessalad.com", 
-            "indices": [
-              0, 
-              23
-            ], 
-            "url": "https://t.co/w22VU02q4X"
-          }
-        ]
       }
     }, 
-    "favourites_count": 21615, 
+    "favourites_count": 50278, 
     "follow_request_sent": false, 
-    "followers_count": 346, 
+    "followers_count": 597, 
     "following": false, 
-    "friends_count": 103, 
+    "friends_count": 157, 
     "geo_enabled": false, 
     "has_extended_profile": false, 
     "id": 3331143699, 
@@ -76,25 +63,26 @@
     "lang": "en", 
     "listed_count": 17, 
     "location": "England", 
-    "name": "Ty Snowdon", 
+    "name": "Ty", 
     "notifications": false, 
     "profile_background_color": "C0DEED", 
     "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3331143699/1447895481", 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/744976202402783233/XQtb524Y_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/744976202402783233/XQtb524Y_normal.jpg", 
-    "profile_link_color": "0084B4", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3331143699/1487294345", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/861607959662612480/8suzn9zY_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/861607959662612480/8suzn9zY_normal.jpg", 
+    "profile_link_color": "1DA1F2", 
     "profile_sidebar_border_color": "C0DEED", 
     "profile_sidebar_fill_color": "DDEEF6", 
     "profile_text_color": "333333", 
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "TyLikesSalad", 
-    "statuses_count": 11093, 
+    "statuses_count": 25960, 
     "time_zone": "London", 
-    "url": "https://t.co/w22VU02q4X", 
+    "translator_type": "none", 
+    "url": null, 
     "utc_offset": 3600, 
     "verified": false
   }
