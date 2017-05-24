@@ -1,5 +1,10 @@
 #!/bin/sh
 
+PYTHON=python
+if (cat /proc/version |grep -i cygwin) ; then
+    PYTHON=python3
+fi
+
 i=0
 for twid in 762697549979484161 \
                 758761004255711232 \
@@ -22,5 +27,5 @@ for twid in 762697549979484161 \
 do
     i=$(($i+1))
     echo refreshing tweet $twid
-    ./tweet2latex.py $twid |tee tweet$i.tex
+    $PYTHON ./tweet2latex.py $twid |tee tweet$i.tex
 done
