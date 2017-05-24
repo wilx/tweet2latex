@@ -237,9 +237,11 @@ if i + 1 in decorationsEnds:
 
 # Wrap emoji characters with switch to emoji containing font.
 
-latexText = regex.sub(r"([\p{Emoticons}\p{Miscellaneous Symbols and Pictographs}\p{Transport and Map Symbols}\p{So}]+)",
-                          r"{\\emojifont \g<1>}", latexText,
-                          regex.V1 | regex.UNICODE)
+emojiRe = r"([\p{Emoticons}\p{Miscellaneous Symbols and Pictographs}\p{Transport and Map Symbols}\p{So}]+)"
+if sys.version_info[0] < 3:
+    emojiRe = unicode(emojiRe)
+
+latexText = regex.sub(emojiRe, r"{\\emojifont \g<1>}", latexText, regex.V1 | regex.UNICODE)
 #latexText = regex.subf(r"(\p{Emoticons}+)", "\{\\emojifont {1}\}", latexText)
 
 # Add date with link to the tweet itself.
