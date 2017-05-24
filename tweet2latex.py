@@ -217,7 +217,7 @@ latexText += ('\\tweetUserName{'
 
 tweetText = tj['text']
 i = 0
-for i in xrange(0,len(tweetText)):
+for i in range(0,len(tweetText)):
     ch = tweetText[i]
     if i in decorationsEnds:
         latexText += decorationsEnds[i]
@@ -237,9 +237,9 @@ if i + 1 in decorationsEnds:
 
 # Wrap emoji characters with switch to emoji containing font.
 
-latexText = regex.sub(ur"([\p{Emoticons}\p{Miscellaneous Symbols and Pictographs}\p{Transport and Map Symbols}]+)",
-                          ur"{\\emojifont \g<1>}", latexText,
-                          regex.V1)
+latexText = regex.sub(r"([\p{Emoticons}\p{Miscellaneous Symbols and Pictographs}\p{Transport and Map Symbols}\p{So}]+)",
+                          r"{\\emojifont \g<1>}", latexText,
+                          regex.V1 | regex.UNICODE)
 #latexText = regex.subf(r"(\p{Emoticons}+)", "\{\\emojifont {1}\}", latexText)
 
 # Add date with link to the tweet itself.
@@ -299,4 +299,7 @@ latexText = ('\\begin{tweet}'
                  + latexText
                  + '\\end{tweet}')
 
-print(latexText.encode('utf-8'))
+if sys.version_info[0] < 3:
+    sys.stdout.write(latexText.encode('utf-8'))
+else:
+    sys.stdout.buffer.write(latexText.encode('utf-8'))
