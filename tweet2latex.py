@@ -119,8 +119,8 @@ if check_file_viable(tweetJsonFile):
     with open(tweetJsonFile, 'r') as infile:
         tj = json.load(infile)
 else:
-    tw = twarc.Twarc(consumer_key, consumer_secret, access_token, access_token_secret)
-    tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id)
+    tw = twarc.Twarc(consumer_key, consumer_secret, access_token, access_token_secret, tweet_mode='extended')
+    tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id, params={'tweet_mode':'extended'})
     tj = tweet.json()
     with open(tweetJsonFile, 'w') as outfile:
         json.dump(tj, outfile, indent=2, sort_keys=True)
@@ -249,7 +249,7 @@ if (in_reply_to_status_id is not None
 
 # Loop over tweet's text and insert decorations for entities.
 
-tweetText = tj['text']
+tweetText = tj['full_text']
 i = 0
 for i in range(0,len(tweetText)):
     ch = tweetText[i]
