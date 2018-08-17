@@ -61,7 +61,7 @@ def escape_latex_basic(str):
     tmp = u''
     for ch in str:
         if (ch == '_' or ch == '#' or ch == '\\' or ch == '%' or ch == '^'
-                or ch == '{' or ch == '}'):
+                or ch == '{' or ch == '}' or ch == '&'):
             tmp += '\\'
         tmp += ch
     return tmp
