@@ -279,6 +279,14 @@ if 'retweet_count' in tj and tj['retweet_count'] is not None:
                     + str(tj['retweet_count'])
                     + '}')
 
+# Likes count.
+
+if 'favorite_count' in tj and tj['favorite_count'] is not None:
+    latexText += ('\\tweetFavorites{'
+                    + str(tj['favorite_count'])
+                    + '}')
+
+
 # Add time stamp.
 
 latexText += ('\\tweetItself{'
