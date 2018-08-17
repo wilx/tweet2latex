@@ -213,6 +213,31 @@ latexText += ('\\tweetUserName{'
                   + escape_latex_basic(tj['user']['screen_name'])
                   + '}')
 
+# Add "in reply to".
+
+in_reply_to_status_id = None
+if 'in_reply_to_status_id' in tj and tj['in_reply_to_status_id'] is not None:
+    in_reply_to_status_id = tj['in_reply_to_status_id']
+
+in_reply_to_user_id = None
+if 'in_reply_to_user_id' in tj and tj['in_reply_to_user_id'] is not None:
+    in_reply_to_user_id = tj['in_reply_to_user_id']
+
+in_reply_to_screen_name = None
+if 'in_reply_to_screen_name' in tj and tj['in_reply_to_screen_name'] is not None:
+    in_reply_to_screen_name = tj['in_reply_to_screen_name']
+
+if (in_reply_to_status_id is not None
+        and in_reply_to_user_id is not None
+        and in_reply_to_screen_name is not None):
+    latexText += ('\\tweetInReplyToTweet{'
+                      + escape_latex_basic(str(in_reply_to_status_id))
+                      + '}{'
+                      + escape_latex_basic(str(in_reply_to_user_id))
+                      + '}{'
+                      + escape_latex_basic(in_reply_to_screen_name)
+                      + '}')
+
 # Loop over tweet's text and insert decorations for entities.
 
 tweetText = tj['text']
