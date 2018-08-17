@@ -213,6 +213,15 @@ latexText += ('\\tweetUserName{'
                   + escape_latex_basic(tj['user']['screen_name'])
                   + '}')
 
+# Verified user checkmark.
+
+if tj['user']['verified']:
+    latexText += '\\tweetUserVerified{}'
+
+# Mark end of user name.
+
+latexText += '\\tweetUserEnd{}';
+
 # Add "in reply to".
 
 in_reply_to_status_id = None
