@@ -272,6 +272,13 @@ latexText = (latexLangStart
                  + latexText
                  + latexLangEnd)
 
+# Retweets count.
+
+if 'retweet_count' in tj and tj['retweet_count'] is not None:
+    latexText += ('\\tweetRetweets{'
+                    + str(tj['retweet_count'])
+                    + '}')
+
 # Add time stamp.
 
 latexText += ('\\tweetItself{'
