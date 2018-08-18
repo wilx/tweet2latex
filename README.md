@@ -14,7 +14,7 @@ succession.
 The contents of the `tweet.tex` might looks something like this:
 
 ```latex
-\begin{tweet}\tweetUserImage{https://pbs.twimg.com/profile\_images/683232086958993408/rnyugqzL\_normal.jpg}{rnyugqzL-normal.jpg}{701158958}\tweetUserName{701158958}{MedicNow}{MedicNow}It could be worse. You could be the lifeguard at the \tweetHashtag{Rio}{\#Rio} swimming pool.... \tweetHashtag{MondayMotivation}{\#MondayMotivation} \tweetPhoto{http://twitter.com/MedicNow/status/762602474293321728/photo/1}{https://pbs.twimg.com/media/CpVOzW7WEAAhMte.jpg}{CpVOzW7WEAAhMte.jpg}{https://t.co/AfoOoV9qQw}\tweetItself{762602474293321728}{Mon Aug 08 10:52:52 +0000 2016}{August 8, 2016}{12:52:52 PM GMT+2}\end{tweet}
+\begin{tweet}\tweetUserImage{https://pbs.twimg.com/profile\_images/887781725249585152/ihwPKKHi\_bigger.jpg}{ihwPKKHi-bigger.jpg}{701158958}\tweetUserName{701158958}{MedicNow}{MedicNow}\tweetUserEnd{}It could be worse. You could be the lifeguard at the \tweetHashtag{Rio}{\#Rio} swimming pool.... \tweetHashtag{MondayMotivation}{\#MondayMotivation} \tweetPhoto{https://twitter.com/MedicNow/status/762602474293321728/photo/1}{https://pbs.twimg.com/media/CpVOzW7WEAAhMte.jpg}{CpVOzW7WEAAhMte.jpg}{https://t.co/AfoOoV9qQw}\tweetRetweets{7}\tweetFavorites{12}\tweetItself{762602474293321728}{Mon Aug 08 10:52:52 +0000 2016}{August 8, 2016}{12:52:52 PM GMT+2}\end{tweet}
 ```
 
 
@@ -24,7 +24,8 @@ Then import the resulting `tweet.tex` in your LaTeX document:
 \import{tweet}
 ```
 
-Formatting of the tweet is up to you. See `tweet-document.tex` for example usage. The following shows simple formatting for tweets::
+Formatting of the tweet is up to you. See `tweet-document.tex` for example
+usage. The following shows simple formatting for tweets:
 
 ```latex
 \newenvironment{tweet}{%
@@ -35,16 +36,26 @@ Formatting of the tweet is up to you. See `tweet-document.tex` for example usage
     \endgroup
   }%
   \newcommand{\tweetUserName}[3]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\quad
-    \href{https://twitter.com/intent/user?user_id=##1}{{\small \color{gray}@##3}}\\}%
+    \href{https://twitter.com/intent/user?user_id=##1}{{\small
+        \color{gray}@##3}}}%
+  \newcommand{\tweetUserVerified}{\hskip 0.16667em\relax{\small
+      \color{cyan}\textcircled{\(\checkmark\)}}}%
+  \newcommand{\tweetUserEnd}{\\}%
   \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
   \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
   \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
+  \newcommand{\tweetInReplyToTweet}[3]{{\small \color{gray}in reply to
+      \href{https://twitter.com/statuses/##1}{tweet} by
+      \href{https://twitter.com/intent/user?user_id=##2}{@##3}}\\}%
   \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
-  \newcommand{\tweetItself}[4]{\flushright
-    \href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
-  \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip]%
+  \newcommand{\tweetRetweets}[1]{\flushright{\small \(\color{gray}\circlearrowright\)\color{gray}\hskip 0.16667em\relax##1}}%
+  \newcommand{\tweetFavorites}[1]{ {\small \(\color{gray}\heartsuit\)\color{gray}\hskip 0.16667em\relax##1}}%
+  \newcommand{\tweetItself}[4]{%
+    \quad\href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
+  \newcommand{\tweetPlace}[3]{\flushright {\small \color{gray}\href{##3}{##1, ##2}}}%
+  \newfontfamily\emojifont{Symbola}[Scale=MatchUppercase]%
+  \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip,halign=flush left]%
     \sffamily%
-    \RaggedRight%
 }{\end{tcolorbox}}
 ```
 
