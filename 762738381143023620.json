@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Mon Aug 08 19:52:55 +0000 2016", 
+  "display_text_range": [
+    0, 
+    134
+  ], 
   "entities": {
     "hashtags": [], 
     "symbols": [], 
@@ -24,13 +28,14 @@
           130, 
           134
         ], 
-        "name": "Wall Street Journal", 
+        "name": "The Wall Street Journal", 
         "screen_name": "WSJ"
       }
     ]
   }, 
   "favorite_count": 6, 
   "favorited": false, 
+  "full_text": "As summer rolls on, thoughts turn to refreshing beverages. Czech Saaz Hops a Hit With Asian Brewers   https://t.co/iZUWfebOY6 via @WSJ", 
   "geo": null, 
   "id": 762738381143023620, 
   "id_str": "762738381143023620", 
@@ -47,14 +52,13 @@
   "retweet_count": 8, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
-  "text": "As summer rolls on, thoughts turn to refreshing beverages. Czech Saaz Hops a Hit With Asian Brewers   https://t.co/iZUWfebOY6 via @WSJ", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
     "created_at": "Thu Sep 12 13:33:45 +0000 2013", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "European advisor for @Privateer_H, @Tilray, @Leafly. Volunteer firefighter. Previously Reporter @WSJ.", 
+    "description": "European Director @Tilray, EU advisor for @Privateer_H. Volunteer firefighter. Previously Reporter @WSJ.", 
     "entities": {
       "description": {
         "urls": []
@@ -62,22 +66,22 @@
       "url": {
         "urls": [
           {
-            "display_url": "bit.ly/2gP4lTw", 
-            "expanded_url": "http://bit.ly/2gP4lTw", 
+            "display_url": "healtheuropa.eu/medical-cannab\u2026", 
+            "expanded_url": "https://www.healtheuropa.eu/medical-cannabis-research-leader/87243/", 
             "indices": [
               0, 
               23
             ], 
-            "url": "https://t.co/jL4i6CoHUr"
+            "url": "https://t.co/zCQqdMJC96"
           }
         ]
       }
     }, 
-    "favourites_count": 962, 
+    "favourites_count": 3029, 
     "follow_request_sent": false, 
-    "followers_count": 1255, 
+    "followers_count": 1301, 
     "following": false, 
-    "friends_count": 806, 
+    "friends_count": 964, 
     "geo_enabled": false, 
     "has_extended_profile": false, 
     "id": 1857463891, 
@@ -85,7 +89,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 124, 
+    "listed_count": 118, 
     "location": "Europe", 
     "name": "Sean Carney", 
     "notifications": false, 
@@ -103,11 +107,11 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "SeanBCarney", 
-    "statuses_count": 2580, 
-    "time_zone": "Belgrade", 
+    "statuses_count": 3136, 
+    "time_zone": null, 
     "translator_type": "none", 
-    "url": "https://t.co/jL4i6CoHUr", 
-    "utc_offset": 7200, 
+    "url": "https://t.co/zCQqdMJC96", 
+    "utc_offset": null, 
     "verified": false
   }
 }

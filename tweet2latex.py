@@ -12,7 +12,7 @@ import json
 import twarc
 import argparse
 import sys
-import urllib
+import six.moves.urllib as urllib
 from icu import SimpleDateFormat, DateFormat, Locale
 tweetDf = SimpleDateFormat("EEE MMM dd hh:mm:ss xx yyyy", Locale.getUS())
 
@@ -120,7 +120,8 @@ if check_file_viable(tweetJsonFile):
         tj = json.load(infile)
 else:
     tw = twarc.Twarc(consumer_key, consumer_secret, access_token, access_token_secret, tweet_mode='extended')
-    tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id, params={'tweet_mode':'extended'})
+    tweet = tw.get('https://api.twitter.com/1.1/statuses/show/%s.json' % args.tweet_id,
+                   params={'tweet_mode':'extended'}, allow_404=True)
     tj = tweet.json()
     with open(tweetJsonFile, 'w') as outfile:
         json.dump(tj, outfile, indent=2, sort_keys=True)
@@ -171,7 +172,7 @@ if entitiesDict is not None:
             filename = url.split('/')[-1].split('#')[0].split('?')[0]
             filename = tweak_filename(filename)
             if not check_file_viable(filename):
-                urllib.urlretrieve (url, filename)
+                urllib.request.urlretrieve (url, filename)
             start = mediaRec['indices'][0]
             end = mediaRec['indices'][1]
             assert start not in decorationsStart
@@ -194,7 +195,7 @@ url = re.sub(r"_normal(?=\.[^.]+$)", "_bigger", url)
 filename = url.split('/')[-1].split('#')[0].split('?')[0]
 filename = tweak_filename(filename)
 if not check_file_viable(filename):
-    urllib.urlretrieve (url, filename)
+    urllib.request.urlretrieve (url, filename)
 latexText += ('\\tweetUserImage{'
                   + escape_latex_basic(url)
                   + '}{'
@@ -337,10 +338,18 @@ latexText += ('\\tweetItself{'
 
 if 'place' in tj and tj['place'] is not None:
     place = tj['place']
+    map_url = urllib.parse.urlunsplit(('https', 'www.google.com', '/maps/search/',
+         urllib.parse.urlencode({
+             'api': 1,
+             'query': place.get('full_name', '') + ', ' + place.get('country')
+             }),
+          None))
     latexText += ('\\tweetPlace{'
                       + escape_latex_basic(place.get('full_name', ''))
                       + '}{'
                       + escape_latex_basic(place.get('country'))
+                      + '}{'
+                      + escape_latex_basic(map_url)
                       + '}')
 
 # Wrap into tweet environment.

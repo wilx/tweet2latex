@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Mon Aug 08 17:10:40 +0000 2016", 
+  "display_text_range": [
+    0, 
+    39
+  ], 
   "entities": {
     "hashtags": [
       {
@@ -28,6 +32,7 @@
   }, 
   "favorite_count": 0, 
   "favorited": false, 
+  "full_text": "#justatest url: https://t.co/maTGizVFyp", 
   "geo": null, 
   "id": 762697549979484161, 
   "id_str": "762697549979484161", 
@@ -44,7 +49,6 @@
   "retweet_count": 0, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
-  "text": "#justatest url: https://t.co/maTGizVFyp", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
@@ -57,11 +61,11 @@
         "urls": []
       }
     }, 
-    "favourites_count": 5035, 
+    "favourites_count": 10508, 
     "follow_request_sent": false, 
-    "followers_count": 42, 
+    "followers_count": 48, 
     "following": false, 
-    "friends_count": 209, 
+    "friends_count": 292, 
     "geo_enabled": true, 
     "has_extended_profile": false, 
     "id": 1359055698, 
@@ -69,7 +73,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "cs", 
-    "listed_count": 1, 
+    "listed_count": 2, 
     "location": "Prague", 
     "name": "V\u00e1clav Haisman", 
     "notifications": false, 
@@ -86,11 +90,11 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "vzeman79", 
-    "statuses_count": 2035, 
-    "time_zone": "Prague", 
+    "statuses_count": 3046, 
+    "time_zone": null, 
     "translator_type": "none", 
     "url": null, 
-    "utc_offset": 7200, 
+    "utc_offset": null, 
     "verified": false
   }
 }

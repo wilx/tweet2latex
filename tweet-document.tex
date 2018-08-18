@@ -14,18 +14,19 @@
 \usepackage{tcolorbox}
 \usepackage{xcolor}
 \usepackage{parskip}
+\usepackage{amssymb}
 
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguages{czech}
 \def\czechfont{}
 
-\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-\setsansfont{TeX Gyre Heros}
-
 \ifxetex
 \usepackage{xeCJK}
 \setCJKfamilyfont{jarm}{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans Mono CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmainfont{Noto Sans CJK JP}
 
 %% The following breaks Japanese text.
 %\usepackage{ucharclasses}
@@ -33,9 +34,14 @@
 %\setTransitionFrom{Emoticons}{\endgroup }
 \else
 \usepackage{luatexja-fontspec}
-\usepackage{luatexja-preset}
+\usepackage[sourcehan]{luatexja-preset}
 \setmainjfont{Noto Sans CJK JP}[Scale=MatchUppercase]
 \fi
+
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+% \setsansfont{TeX Gyre Heros}
+\setsansfont{Noto Sans}
+
 
 \usepackage{microtype}
 
@@ -57,18 +63,28 @@
     \endgroup
   }%
   \newcommand{\tweetUserName}[3]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\quad
-    \href{https://twitter.com/intent/user?user_id=##1}{{\small \color{gray}@##3}}\\}%
+    \href{https://twitter.com/intent/user?user_id=##1}{{\small
+        \color{gray}@##3}}}%
+  \newcommand{\tweetUserVerified}{\hskip 0.16667em\relax{\small
+      \color{cyan}\textcircled{\(\checkmark\)}}}%
+  \newcommand{\tweetUserEnd}{\\}%
   \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
   \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
   \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
+  \newcommand{\tweetInReplyToTweet}[3]{{\small \color{gray}in reply to
+      \href{https://twitter.com/statuses/##1}{tweet} by
+      \href{https://twitter.com/intent/user?user_id=##2}{@##3}}\\}%
   \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
-  \newcommand{\tweetItself}[4]{\flushright
-    \href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
-  \newcommand{\tweetPlace}[2]{\flushright {\small \color{gray}##1, ##2}}%
+  \newcommand{\tweetRetweets}[1]{\flushright{\small \(\color{gray}\circlearrowright\)\color{gray}\hskip 0.16667em\relax##1}}%
+  \newcommand{\tweetFavorites}[1]{ {\small \(\color{gray}\heartsuit\)\color{gray}\hskip 0.16667em\relax##1}}%
+  \newcommand{\tweetItself}[4]{%
+    \quad\href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
+  \newcommand{\tweetPlace}[3]{\flushright {\small \color{gray}\href{##3}{##1, ##2}}}%
   \newfontfamily\emojifont{Symbola}[Scale=MatchUppercase]%
   \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip,halign=flush left]%
     \sffamily%
 }{\end{tcolorbox}}
+
 
 % This allows line breaks in URL in more places.
 \def\UrlBreaks{\do\/\do-\do.\do=\do_\do?\do\&\do\%\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
@@ -122,14 +138,5 @@ Still not satisfied?
 \input{tweet12}
 
 \input{tweet13}
-
-\input{tweet14}
-
-\input{tweet15}
-
-\input{tweet16}
-
-This tweet is hilarious:
-\input{tweet17}
 
 \end{document}

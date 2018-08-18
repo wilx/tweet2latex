@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Mon May 05 22:09:42 +0000 2014", 
+  "display_text_range": [
+    0, 
+    103
+  ], 
   "entities": {
     "hashtags": [
       {
@@ -38,14 +42,14 @@
             "w": 960
           }, 
           "medium": {
-            "h": 338, 
+            "h": 541, 
             "resize": "fit", 
-            "w": 600
+            "w": 960
           }, 
           "small": {
-            "h": 192, 
+            "h": 383, 
             "resize": "fit", 
-            "w": 340
+            "w": 680
           }, 
           "thumb": {
             "h": 150, 
@@ -92,14 +96,14 @@
             "w": 960
           }, 
           "medium": {
-            "h": 338, 
+            "h": 541, 
             "resize": "fit", 
-            "w": 600
+            "w": 960
           }, 
           "small": {
-            "h": 192, 
+            "h": 383, 
             "resize": "fit", 
-            "w": 340
+            "w": 680
           }, 
           "thumb": {
             "h": 150, 
@@ -112,8 +116,9 @@
       }
     ]
   }, 
-  "favorite_count": 3390, 
+  "favorite_count": 5080, 
   "favorited": false, 
+  "full_text": "Sunsets don't get much better than this one over @GrandTetonNPS. #nature #sunset http://t.co/YuKy2rcjyU", 
   "geo": null, 
   "id": 463440424141459456, 
   "id_str": "463440424141459456", 
@@ -127,10 +132,9 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 2415, 
+  "retweet_count": 2895, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
-  "text": "Sunsets don't get much better than this one over @GrandTetonNPS. #nature #sunset http://t.co/YuKy2rcjyU", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
@@ -156,11 +160,11 @@
         ]
       }
     }, 
-    "favourites_count": 2672, 
+    "favourites_count": 3453, 
     "follow_request_sent": false, 
-    "followers_count": 3326137, 
+    "followers_count": 5188217, 
     "following": false, 
-    "friends_count": 224511, 
+    "friends_count": 138933, 
     "geo_enabled": true, 
     "has_extended_profile": true, 
     "id": 76348185, 
@@ -168,15 +172,15 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 7193, 
+    "listed_count": 7609, 
     "location": "Washington, DC", 
-    "name": "US Dept of Interior", 
+    "name": "US Department of the Interior", 
     "notifications": false, 
     "profile_background_color": "C6E2EE", 
-    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/688410897/0390727e0b833fa7f8536a100da185fa.jpeg", 
-    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/688410897/0390727e0b833fa7f8536a100da185fa.jpeg", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme2/bg.gif", 
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme2/bg.gif", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/76348185/1493749877", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/76348185/1522850644", 
     "profile_image_url": "http://pbs.twimg.com/profile_images/432081479/DOI_LOGO_normal.jpg", 
     "profile_image_url_https": "https://pbs.twimg.com/profile_images/432081479/DOI_LOGO_normal.jpg", 
     "profile_link_color": "1F98C7", 
@@ -186,11 +190,11 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "Interior", 
-    "statuses_count": 16075, 
-    "time_zone": "Eastern Time (US & Canada)", 
+    "statuses_count": 20618, 
+    "time_zone": null, 
     "translator_type": "none", 
     "url": "http://t.co/gUty7d4LZ8", 
-    "utc_offset": -14400, 
+    "utc_offset": null, 
     "verified": true
   }
 }

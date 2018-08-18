@@ -2,14 +2,19 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Mon Aug 08 15:53:23 +0000 2016", 
+  "display_text_range": [
+    0, 
+    79
+  ], 
   "entities": {
     "hashtags": [], 
     "symbols": [], 
     "urls": [], 
     "user_mentions": []
   }, 
-  "favorite_count": 3076, 
+  "favorite_count": 2944, 
   "favorited": false, 
+  "full_text": "\"Can I borrow you for two minutes?\"\n\nWondering what would happen if you said no", 
   "geo": null, 
   "id": 762678098206814208, 
   "id_str": "762678098206814208", 
@@ -21,44 +26,52 @@
   "is_quote_status": false, 
   "lang": "en", 
   "place": null, 
-  "retweet_count": 1153, 
+  "retweet_count": 1092, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
-  "text": "\"Can I borrow you for two minutes?\"\n\nWondering what would happen if you said no", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
     "created_at": "Wed Dec 19 23:12:45 +0000 2012", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "Very British Problems books: https://t.co/s6dusqHJtC & https://t.co/ENuC0VvKsZ \u2022 TV show: @netflix \u2022 Shirts: https://t.co/mcTVkEb1Nw", 
+    "description": "Very British Problems Volume 3 Book https://t.co/NoOKsRGIPi \u2022 Game https://t.co/Kv5mSjlXJC \u2022 Mugs https://t.co/ow6WOraRgp \u2022 Shirts https://t.co/mcTVkEb1Nw", 
     "entities": {
       "description": {
         "urls": [
           {
-            "display_url": "amzn.to/1NlMpwq", 
-            "expanded_url": "http://amzn.to/1NlMpwq", 
+            "display_url": "amzn.to/2vB58TR", 
+            "expanded_url": "http://amzn.to/2vB58TR", 
             "indices": [
-              29, 
-              52
+              36, 
+              59
             ], 
-            "url": "https://t.co/s6dusqHJtC"
+            "url": "https://t.co/NoOKsRGIPi"
           }, 
           {
-            "display_url": "amzn.to/2dVpqfu", 
-            "expanded_url": "http://amzn.to/2dVpqfu", 
+            "display_url": "bit.ly/2yt70Lr", 
+            "expanded_url": "http://bit.ly/2yt70Lr", 
             "indices": [
-              55, 
-              78
+              67, 
+              90
             ], 
-            "url": "https://t.co/ENuC0VvKsZ"
+            "url": "https://t.co/Kv5mSjlXJC"
+          }, 
+          {
+            "display_url": "rdbl.co/2gklBW4", 
+            "expanded_url": "http://rdbl.co/2gklBW4", 
+            "indices": [
+              98, 
+              121
+            ], 
+            "url": "https://t.co/ow6WOraRgp"
           }, 
           {
             "display_url": "verybritishproblems.teemill.co.uk", 
             "expanded_url": "http://verybritishproblems.teemill.co.uk", 
             "indices": [
-              109, 
-              132
+              131, 
+              154
             ], 
             "url": "https://t.co/mcTVkEb1Nw"
           }
@@ -78,9 +91,9 @@
         ]
       }
     }, 
-    "favourites_count": 1497, 
+    "favourites_count": 1570, 
     "follow_request_sent": false, 
-    "followers_count": 2147873, 
+    "followers_count": 4004913, 
     "following": true, 
     "friends_count": 1, 
     "geo_enabled": false, 
@@ -90,15 +103,15 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 5314, 
+    "listed_count": 5712, 
     "location": "", 
     "name": "VeryBritishProblems", 
     "notifications": false, 
     "profile_background_color": "F0DD0E", 
-    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000078388207/476571d862157b41c1e5bf0cd9ba8ede.jpeg", 
-    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000078388207/476571d862157b41c1e5bf0cd9ba8ede.jpeg", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif", 
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1023072078/1476951805", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1023072078/1506610198", 
     "profile_image_url": "http://pbs.twimg.com/profile_images/2996456104/b707959f192bba5c31c07058f91a183b_normal.png", 
     "profile_image_url_https": "https://pbs.twimg.com/profile_images/2996456104/b707959f192bba5c31c07058f91a183b_normal.png", 
     "profile_link_color": "009999", 
@@ -108,7 +121,7 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "SoVeryBritish", 
-    "statuses_count": 3032, 
+    "statuses_count": 3643, 
     "time_zone": null, 
     "translator_type": "none", 
     "url": "https://t.co/XEtPZkOPPP", 

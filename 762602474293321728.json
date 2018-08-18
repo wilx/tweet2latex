@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Mon Aug 08 10:52:52 +0000 2016", 
+  "display_text_range": [
+    0, 
+    93
+  ], 
   "entities": {
     "hashtags": [
       {
@@ -101,8 +105,9 @@
       }
     ]
   }, 
-  "favorite_count": 13, 
+  "favorite_count": 12, 
   "favorited": false, 
+  "full_text": "It could be worse. You could be the lifeguard at the #Rio swimming pool.... #MondayMotivation https://t.co/AfoOoV9qQw", 
   "geo": null, 
   "id": 762602474293321728, 
   "id_str": "762602474293321728", 
@@ -119,7 +124,6 @@
   "retweet_count": 7, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>", 
-  "text": "It could be worse. You could be the lifeguard at the #Rio swimming pool.... #MondayMotivation https://t.co/AfoOoV9qQw", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
@@ -145,11 +149,11 @@
         ]
       }
     }, 
-    "favourites_count": 4586, 
+    "favourites_count": 5569, 
     "follow_request_sent": false, 
-    "followers_count": 3820, 
+    "followers_count": 4351, 
     "following": false, 
-    "friends_count": 2988, 
+    "friends_count": 3162, 
     "geo_enabled": false, 
     "has_extended_profile": true, 
     "id": 701158958, 
@@ -157,17 +161,17 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 33, 
+    "listed_count": 28, 
     "location": "United Kingdom", 
     "name": "MedicNow", 
     "notifications": false, 
     "profile_background_color": "D5E6ED", 
-    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/886245739/561c30765e8212c730d56f3deab567c8.png", 
-    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/886245739/561c30765e8212c730d56f3deab567c8.png", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/701158958/1493313468", 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/840242424731570177/Hvgv5Lxw_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/840242424731570177/Hvgv5Lxw_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/701158958/1514933483", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/887781725249585152/ihwPKKHi_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/887781725249585152/ihwPKKHi_normal.jpg", 
     "profile_link_color": "0084B4", 
     "profile_sidebar_border_color": "FFFFFF", 
     "profile_sidebar_fill_color": "DDEEF6", 
@@ -175,11 +179,11 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "MedicNow", 
-    "statuses_count": 11439, 
-    "time_zone": "Amsterdam", 
+    "statuses_count": 14909, 
+    "time_zone": null, 
     "translator_type": "none", 
     "url": "https://t.co/HwVcHhfW5f", 
-    "utc_offset": 7200, 
+    "utc_offset": null, 
     "verified": false
   }
 }

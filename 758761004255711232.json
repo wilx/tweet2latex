@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Thu Jul 28 20:28:15 +0000 2016", 
+  "display_text_range": [
+    0, 
+    50
+  ], 
   "entities": {
     "hashtags": [
       {
@@ -101,8 +105,9 @@
       }
     ]
   }, 
-  "favorite_count": 2075, 
-  "favorited": true, 
+  "favorite_count": 2032, 
+  "favorited": false, 
+  "full_text": "#ShirtCeption continues.... tonight! #CriticalRole https://t.co/j8Q4mUlrWy", 
   "geo": null, 
   "id": 758761004255711232, 
   "id_str": "758761004255711232", 
@@ -116,17 +121,16 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 316, 
+  "retweet_count": 306, 
   "retweeted": true, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
-  "text": "#ShirtCeption continues.... tonight! #CriticalRole https://t.co/j8Q4mUlrWy", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
     "created_at": "Tue Sep 25 02:57:09 +0000 2007", 
     "default_profile": false, 
     "default_profile_image": false, 
-    "description": "I work on cartoons like #ElenaOfAvalor #Home #PickleandPeanut #FutureWorm #SofiatheFirst & #DuckTales. I play D&D on #CriticalRole. I bathe infrequently.", 
+    "description": "I work on cartoons like #DuckTales #Home #FancyNancy #ElenaOfAvalor #DCSuperheroGirls & #SofiaTheFirst. I play D&D on #CriticalRole. I am handsome.", 
     "entities": {
       "description": {
         "urls": []
@@ -145,11 +149,11 @@
         ]
       }
     }, 
-    "favourites_count": 7200, 
+    "favourites_count": 10729, 
     "follow_request_sent": false, 
-    "followers_count": 80624, 
+    "followers_count": 179099, 
     "following": true, 
-    "friends_count": 381, 
+    "friends_count": 489, 
     "geo_enabled": false, 
     "has_extended_profile": true, 
     "id": 9083222, 
@@ -157,29 +161,29 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 780, 
+    "listed_count": 1198, 
     "location": "El Ay", 
     "name": "Sam Riegel", 
     "notifications": false, 
     "profile_background_color": "BADFCD", 
-    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/18285748/DSC00230.JPG", 
-    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/18285748/DSC00230.JPG", 
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme12/bg.gif", 
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme12/bg.gif", 
     "profile_background_tile": true, 
     "profile_banner_url": "https://pbs.twimg.com/profile_banners/9083222/1486397197", 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/855514770832637952/0ovfjCrt_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/855514770832637952/0ovfjCrt_normal.jpg", 
-    "profile_link_color": "9266CC", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/968256400655753217/fWAI6OGF_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/968256400655753217/fWAI6OGF_normal.jpg", 
+    "profile_link_color": "981CEB", 
     "profile_sidebar_border_color": "F2E195", 
     "profile_sidebar_fill_color": "FFF7CC", 
     "profile_text_color": "0C3E53", 
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "samriegel", 
-    "statuses_count": 13327, 
-    "time_zone": "Pacific Time (US & Canada)", 
+    "statuses_count": 15791, 
+    "time_zone": null, 
     "translator_type": "none", 
     "url": "https://t.co/o3olzfmwQN", 
-    "utc_offset": -25200, 
+    "utc_offset": null, 
     "verified": true
   }
 }

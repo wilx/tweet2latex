@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Mon May 22 07:15:24 +0000 2017", 
+  "display_text_range": [
+    12, 
+    12
+  ], 
   "entities": {
     "hashtags": [], 
     "media": [
@@ -52,7 +56,7 @@
           0, 
           11
         ], 
-        "name": "june \ud83c\udf80", 
+        "name": "shoe", 
         "screen_name": "shoe0nhead"
       }
     ]
@@ -97,8 +101,9 @@
       }
     ]
   }, 
-  "favorite_count": 462, 
+  "favorite_count": 1058, 
   "favorited": false, 
+  "full_text": "@shoe0nhead  https://t.co/THfuX1KbOr", 
   "geo": null, 
   "id": 866553062361415681, 
   "id_str": "866553062361415681", 
@@ -112,17 +117,16 @@
   "place": null, 
   "possibly_sensitive": false, 
   "possibly_sensitive_appealable": false, 
-  "retweet_count": 48, 
+  "retweet_count": 92, 
   "retweeted": false, 
   "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Lite</a>", 
-  "text": "@shoe0nhead  https://t.co/THfuX1KbOr", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
     "created_at": "Tue Apr 21 21:27:56 +0000 2009", 
     "default_profile": true, 
     "default_profile_image": false, 
-    "description": "Wannabe history buff and musician", 
+    "description": "I'm just some fucking guy", 
     "entities": {
       "description": {
         "urls": []
@@ -141,11 +145,11 @@
         ]
       }
     }, 
-    "favourites_count": 226, 
+    "favourites_count": 1007, 
     "follow_request_sent": false, 
-    "followers_count": 15, 
+    "followers_count": 23, 
     "following": false, 
-    "friends_count": 100, 
+    "friends_count": 175, 
     "geo_enabled": false, 
     "has_extended_profile": false, 
     "id": 34048973, 
@@ -153,16 +157,17 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 0, 
+    "listed_count": 1, 
     "location": "", 
-    "name": "Intermattercourse", 
+    "name": "eternal void-posting", 
     "notifications": false, 
     "profile_background_color": "C0DEED", 
     "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_tile": false, 
-    "profile_image_url": "http://pbs.twimg.com/profile_images/628503398069841920/bTeea_pG_normal.jpg", 
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/628503398069841920/bTeea_pG_normal.jpg", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/34048973/1521136972", 
+    "profile_image_url": "http://pbs.twimg.com/profile_images/974345186124865536/BOFmvdKD_normal.jpg", 
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/974345186124865536/BOFmvdKD_normal.jpg", 
     "profile_link_color": "1DA1F2", 
     "profile_sidebar_border_color": "C0DEED", 
     "profile_sidebar_fill_color": "DDEEF6", 
@@ -170,7 +175,7 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "blargler", 
-    "statuses_count": 98, 
+    "statuses_count": 727, 
     "time_zone": null, 
     "translator_type": "none", 
     "url": "https://t.co/3CXYjhrolb", 

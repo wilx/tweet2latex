@@ -2,6 +2,10 @@
   "contributors": null, 
   "coordinates": null, 
   "created_at": "Thu Aug 11 20:57:48 +0000 2016", 
+  "display_text_range": [
+    0, 
+    64
+  ], 
   "entities": {
     "hashtags": [], 
     "symbols": [], 
@@ -20,6 +24,7 @@
   }, 
   "favorite_count": 76, 
   "favorited": false, 
+  "full_text": "Confused. What's your gaming question? \ud83d\ude1a https://t.co/DpmargYSy6", 
   "geo": null, 
   "id": 763841870480879617, 
   "id_str": "763841870480879617", 
@@ -70,6 +75,10 @@
     "contributors": null, 
     "coordinates": null, 
     "created_at": "Thu Aug 11 19:22:47 +0000 2016", 
+    "display_text_range": [
+      0, 
+      105
+    ], 
     "entities": {
       "hashtags": [], 
       "symbols": [], 
@@ -89,6 +98,7 @@
     }, 
     "favorite_count": 2, 
     "favorited": false, 
+    "full_text": "@ChrisPerkinsDnD everyone ask you gaming questions so here is a different question. How are you today :-)", 
     "geo": null, 
     "id": 763817959009689600, 
     "id_str": "763817959009689600", 
@@ -103,7 +113,6 @@
     "retweet_count": 0, 
     "retweeted": false, 
     "source": "<a href=\"http://twitter.com/#!/download/ipad\" rel=\"nofollow\">Twitter for iPad</a>", 
-    "text": "@ChrisPerkinsDnD everyone ask you gaming questions so here is a different question. How are you today :-)", 
     "truncated": false, 
     "user": {
       "contributors_enabled": false, 
@@ -116,11 +125,11 @@
           "urls": []
         }
       }, 
-      "favourites_count": 228, 
+      "favourites_count": 789, 
       "follow_request_sent": false, 
-      "followers_count": 115, 
+      "followers_count": 122, 
       "following": false, 
-      "friends_count": 173, 
+      "friends_count": 212, 
       "geo_enabled": false, 
       "has_extended_profile": true, 
       "id": 722096430, 
@@ -128,7 +137,7 @@
       "is_translation_enabled": false, 
       "is_translator": false, 
       "lang": "en", 
-      "listed_count": 0, 
+      "listed_count": 3, 
       "location": "", 
       "name": "Jordan Berry", 
       "notifications": false, 
@@ -146,7 +155,7 @@
       "profile_use_background_image": true, 
       "protected": false, 
       "screen_name": "BezNo1", 
-      "statuses_count": 570, 
+      "statuses_count": 659, 
       "time_zone": null, 
       "translator_type": "none", 
       "url": null, 
@@ -156,27 +165,31 @@
   }, 
   "quoted_status_id": 763817959009689600, 
   "quoted_status_id_str": "763817959009689600", 
+  "quoted_status_permalink": {
+    "display": "twitter.com/bezno1/status/\u2026", 
+    "expanded": "https://twitter.com/bezno1/status/763817959009689600", 
+    "url": "https://t.co/DpmargYSy6"
+  }, 
   "retweet_count": 1, 
   "retweeted": false, 
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
-  "text": "Confused. What's your gaming question? \ud83d\ude1a https://t.co/DpmargYSy6", 
   "truncated": false, 
   "user": {
     "contributors_enabled": false, 
     "created_at": "Sat Aug 30 18:01:57 +0000 2014", 
     "default_profile": true, 
     "default_profile_image": false, 
-    "description": "D&D storyteller and Dungeon Master. I work for Wizards of the Coast. My familiar is a chiweenie named Milo. Have a magical day!", 
+    "description": "He/him. D&D storyteller. I work for Wizards of the Coast. My familiar is a chiweenie named Milo, and my views are my own. Have a magical day!", 
     "entities": {
       "description": {
         "urls": []
       }
     }, 
-    "favourites_count": 51300, 
+    "favourites_count": 76983, 
     "follow_request_sent": false, 
-    "followers_count": 41521, 
+    "followers_count": 76770, 
     "following": true, 
-    "friends_count": 2299, 
+    "friends_count": 3939, 
     "geo_enabled": true, 
     "has_extended_profile": true, 
     "id": 2780874870, 
@@ -184,7 +197,7 @@
     "is_translation_enabled": false, 
     "is_translator": false, 
     "lang": "en", 
-    "listed_count": 457, 
+    "listed_count": 699, 
     "location": "Seattle, WA", 
     "name": "Christopher Perkins", 
     "notifications": false, 
@@ -192,7 +205,7 @@
     "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
     "profile_background_tile": false, 
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2780874870/1492869623", 
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2780874870/1530820518", 
     "profile_image_url": "http://pbs.twimg.com/profile_images/827205023155183616/Uk3aswVz_normal.jpg", 
     "profile_image_url_https": "https://pbs.twimg.com/profile_images/827205023155183616/Uk3aswVz_normal.jpg", 
     "profile_link_color": "1DA1F2", 
@@ -202,7 +215,7 @@
     "profile_use_background_image": true, 
     "protected": false, 
     "screen_name": "ChrisPerkinsDnD", 
-    "statuses_count": 8602, 
+    "statuses_count": 11108, 
     "time_zone": null, 
     "translator_type": "none", 
     "url": null, 
