@@ -1,0 +1,116 @@
+\documentclass[a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[paper=A4,DIV=calc,twocolumn]{typearea}
+\usepackage{graphicx,grffile}
+\usepackage{etoolbox}
+\usepackage[unicode=true]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\hypersetup{breaklinks=true, hidelinks}
+\usepackage{bookmark}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{amssymb}
+
+\usepackage{microtype}
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\tcbuselibrary{breakable, skins}
+
+\newenvironment{tweet}{%
+  \newcommand{\tweetUserImage}[3]{%
+    \begingroup%
+      \includegraphics[keepaspectratio,height=1em]{##2}%
+      \quad
+    \endgroup
+  }%
+  \newcommand{\tweetUserName}[3]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\quad
+    \href{https://twitter.com/intent/user?user_id=##1}{{\small
+        \color{gray}@##3}}}%
+  \newcommand{\tweetUserVerified}{\hskip 0.16667em\relax{\small
+      \color{cyan}\textcircled{\(\checkmark\)}}}%
+  \newcommand{\tweetUserEnd}{\\}%
+  \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
+  \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
+  \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
+  \newcommand{\tweetInReplyToTweet}[3]{{\small \color{gray}in reply to
+      \href{https://twitter.com/statuses/##1}{tweet} by
+      \href{https://twitter.com/intent/user?user_id=##2}{@##3}}\\}%
+  \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
+  \newcommand{\tweetRetweets}[1]{\flushright{\small \(\color{gray}\circlearrowright\)\color{gray}\hskip 0.16667em\relax##1}}%
+  \newcommand{\tweetFavorites}[1]{ {\small \(\color{gray}\heartsuit\)\color{gray}\hskip 0.16667em\relax##1}}%
+  \newcommand{\tweetItself}[4]{%
+    \quad\href{https://twitter.com/statuses/##1}{{\small \color{gray}##3 ##4}}}%
+  \newcommand{\tweetPlace}[3]{\flushright {\small \color{gray}\href{##3}{##1, ##2}}}%
+  % XXX: What to do with emojis in PDFLaTeX?
+  \newcommand*{\emojifont}{}%
+  \begin{tcolorbox}[size=small,enhanced,breakable,autoparskip,halign=flush left]%
+    \sffamily%
+}{\end{tcolorbox}}
+
+
+% This allows line breaks in URL in more places.
+\def\UrlBreaks{\do\/\do-\do.\do=\do_\do?\do\&\do\%\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
+
+
+\begin{document}
+
+\title{Testing Tweets}
+\author{Author's Name}
+
+\maketitle
+
+\begin{abstract}
+  This is a test of (semi-)automated tweets formatting. This started as an
+  attempt to answer \TeX .SE question
+  \href{http://tex.stackexchange.com/q/323562/28495}{``Quoting tweets inside
+    a \LaTeX{} document?''} See
+  \texttt{\href{https://github.com/wilx/tweet2latex}{tweet2latex}} GitHub
+  repository for source code and more details.
+\end{abstract}
+
+\section{The tweets}\label{the-tweets}%
+Here are some tweets:
+\input{tweet1}
+
+\input{tweet2}
+
+\input{tweet3}
+
+\input{tweet4}
+
+\input{tweet5}
+
+\section{More tweets}\label{more-tweets}%
+And here are some more tweets:
+\input{tweet6}
+
+\input{tweet7}
+
+\input{tweet8}
+
+%\input{tweet9}
+
+\section{Last two tweets}\label{last-two-tweets}%
+Still not satisfied?
+\input{tweet10}
+
+%\input{tweet11}
+
+\section{I am spent!}\label{i-am-spent}%
+\input{tweet12}
+
+%\input{tweet13}
+
+\end{document}

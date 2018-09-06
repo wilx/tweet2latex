@@ -94,6 +94,9 @@ parser.add_argument('-c', '--config',
                     help="Config file containing Twitter keys and secrets")
 parser.add_argument('-p', '--profile', default='main',
                     help="Name of a profile in your configuration file")
+parser.add_argument("--pdflatex", action="store_true",
+                    default=False, required=False,
+                    help="Produce PDFLaTeX compatible output.")
 
 args = parser.parse_args()
 
@@ -101,6 +104,7 @@ consumer_key = args.consumer_key or os.environ.get('CONSUMER_KEY')
 consumer_secret = args.consumer_secret or os.environ.get('CONSUMER_SECRET')
 access_token = args.access_token or os.environ.get('ACCESS_TOKEN')
 access_token_secret = args.access_token_secret or os.environ.get('ACCESS_TOKEN_SECRET')
+use_pdflatex = args.pdflatex
 
 if not (consumer_key and consumer_secret and
         access_token and access_token_secret):
@@ -299,7 +303,7 @@ langTable = {'cs': 'czech'}
 latexLang = langTable.get(tj['lang'], None)
 latexLangStart = ''
 latexLangEnd = ''
-if latexLang is not None:
+if latexLang is not None and not use_pdflatex:
     latexLangStart = "\\text%s{" % latexLang
     latexLangEnd = "}"
 
