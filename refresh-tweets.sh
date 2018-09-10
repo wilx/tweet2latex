@@ -24,5 +24,5 @@ for twid in 762697549979484161 \
 do
     i=$(($i+1))
     echo refreshing tweet $twid
-    $PYTHON ./tweet2latex.py $twid |tee tweet$i.tex
+    $PYTHON ./tweet2latex.py --pdflatex --caption $twid |tee tweet$i.tex
 done
