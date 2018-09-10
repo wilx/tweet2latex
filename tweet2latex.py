@@ -12,6 +12,7 @@ import json
 import twarc
 import argparse
 import sys
+from enum import Enum
 import six.moves.urllib as urllib
 from icu import SimpleDateFormat, DateFormat, Locale
 tweetDf = SimpleDateFormat("EEE MMM dd hh:mm:ss xx yyyy", Locale.getUS())
@@ -32,6 +33,15 @@ except ImportError:
     # Python 3
     from html.parser import HTMLParser
 htmlParser = HTMLParser()
+
+
+class CaptionPlacement(Enum):
+    top = 'top'
+    bottom = 'bottom'
+
+    def __str__ (self):
+        return self.value
+
 
 def load_config(filename, profile):
     if not os.path.isfile(filename):
@@ -97,6 +107,13 @@ parser.add_argument('-p', '--profile', default='main',
 parser.add_argument("--pdflatex", action="store_true",
                     default=False, required=False,
                     help="Produce PDFLaTeX compatible output.")
+parser.add_argument("--caption", action="store_true",
+                    default=False, required=False,
+                    help="Add caption to generated LaTeX.")
+parser.add_argument("--caption-placement", action="store",
+                    type=CaptionPlacement, choices=list(CaptionPlacement),
+                    default='top', required=False,
+                    help="Caption placement. (default: top)")
 
 args = parser.parse_args()
 
@@ -105,6 +122,8 @@ consumer_secret = args.consumer_secret or os.environ.get('CONSUMER_SECRET')
 access_token = args.access_token or os.environ.get('ACCESS_TOKEN')
 access_token_secret = args.access_token_secret or os.environ.get('ACCESS_TOKEN_SECRET')
 use_pdflatex = args.pdflatex
+caption = args.caption
+caption_placement = args.caption_placement
 
 if not (consumer_key and consumer_secret and
         access_token and access_token_secret):
@@ -362,6 +381,38 @@ latexText = htmlParser.unescape(latexText)
 latexText = ('\\begin{tweet}'
                  + latexText
                  + '\\end{tweet}')
+
+captionText = ('\\tweetCaption{'
+                   + tj['id_str']
+                   + '}{'
+                   + escape_latex_basic(tj['user']['name'])
+                   + '}{'
+                   + escape_latex_basic(tj['user']['screen_name'])
+                   + '}{'
+                   + escape_latex_basic(tj['created_at'])
+                   + '}{'
+                   + escape_latex_basic(localizedTweetDate)
+                   + '}{'
+                   + escape_latex_basic(localizedTweetTime)
+                   + '}')
+
+if (in_reply_to_status_id is not None
+        and in_reply_to_user_id is not None
+        and in_reply_to_screen_name is not None):
+    captionText += ('{'
+                      + escape_latex_basic(str(in_reply_to_status_id))
+                      + '}{'
+                      + escape_latex_basic(str(in_reply_to_user_id))
+                      + '}{'
+                      + escape_latex_basic(in_reply_to_screen_name)
+                      + '}')
+else:
+    captionText += '{}{}{}'
+
+if caption and caption_placement is CaptionPlacement.top:
+    latexText = captionText + latexText
+elif caption and caption_placement is CaptionPlacement.bottom:
+    latexText = latexText + captionText
 
 if sys.version_info[0] < 3:
     sys.stdout.write(latexText.encode('utf-8'))
