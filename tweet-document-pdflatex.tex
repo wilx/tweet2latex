@@ -32,7 +32,7 @@
   crefname={tweet}{tweets}]{tweetbox}[2]{%
   %float, floatplacement=ht,
   enhanced, breakable, autoparskip, size=small, %
-  halign=flush left, title=#1, label=#2}
+  halign=flush left, title={Tweet \thetcbcounter: #1}, label={#2}, list text={#1}}
 
 \newenvironment{tweet}{%
   \newcommand{\tweetUserImage}[3]{%
@@ -66,7 +66,7 @@
   \newcommand{\tweetPlace}[3]{\flushright {\small \color{gray}\href{##3}{##1, ##2}}}%
   % XXX: What to do with emojis in PDFLaTeX?
   \newcommand*{\emojifont}{}%
-  \begin{tweetbox}{Tweet \thetcbcounter. \tweetCaptionText}{\tweetLabel}%
+  \begin{tweetbox}{\tweetCaptionText}{\tweetLabel}%
     \sffamily%
 }%
 {%
@@ -134,8 +134,14 @@ Still not satisfied?
 %\inputTweet{tweet11}
 
 \section{I am spent!}\label{i-am-spent}%
+I find \cref{tweet12} very funny:
 \inputTweet{tweet12}
 
-%\inputTweet{tweet13}
+And \cref{tweet3}, too!
+
+% \inputTweet{tweet13}
+
+%
+\tcblistof[\section]{tweet}{List of Tweets\label{lotweets}}
 
 \end{document}
