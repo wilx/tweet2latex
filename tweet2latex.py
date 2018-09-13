@@ -70,10 +70,14 @@ def default_config_filename():
 def escape_latex_basic(str):
     tmp = u''
     for ch in str:
-        if (ch == '_' or ch == '#' or ch == '\\' or ch == '%' or ch == '^'
+        if ch == '\\':
+            tmp += '\\textbackslash '
+        elif (ch == '_' or ch == '#' or ch == '%' or ch == '^'
                 or ch == '{' or ch == '}' or ch == '&'):
             tmp += '\\'
-        tmp += ch
+            tmp += ch
+        else:
+            tmp += ch
     return tmp
 
 def tweak_filename(str):
