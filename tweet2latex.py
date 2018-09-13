@@ -118,6 +118,10 @@ parser.add_argument("--caption-placement", action="store",
                     type=CaptionPlacement, choices=list(CaptionPlacement),
                     default='top', required=False,
                     help="Caption placement. (default: top)")
+parser.add_argument("--keep-spaces", action="store_true",
+                    default=False, required=False,
+                    help="Try to keep extra space characters.")
+
 
 args = parser.parse_args()
 
@@ -128,6 +132,7 @@ access_token_secret = args.access_token_secret or os.environ.get('ACCESS_TOKEN_S
 use_pdflatex = args.pdflatex
 caption = args.caption
 caption_placement = args.caption_placement
+keep_spaces = args.keep_spaces
 
 if not (consumer_key and consumer_secret and
         access_token and access_token_secret):
@@ -279,6 +284,7 @@ if (in_reply_to_status_id is not None
 
 tweetText = tj['full_text']
 i = 0
+prev_ch = None
 for i in range(0,len(tweetText)):
     ch = tweetText[i]
     if i in decorationsEnds:
@@ -291,8 +297,12 @@ for i in range(0,len(tweetText)):
         latexText += '\\char`\\~{}'
     elif ch == "\n":
         latexText += "\\hfill\\break\n\\null{}"
+    elif ch == ' ' and keep_spaces and prev_ch == ch:
+        latexText += '\\space{}'
     else:
         latexText += escape_latex_basic(ch)
+
+    prev_ch = ch
 
 if i + 1 in decorationsEnds:
     latexText += decorationsEnds[i + 1]
