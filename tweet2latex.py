@@ -392,7 +392,12 @@ if 'place' in tj and tj['place'] is not None:
 
 # Wrap into tweet environment.
 
-latexText = html.unescape(latexText)
+if sys.version_info[0] < 3:
+    html_unescape = HTMLParser.unescape
+else:
+    html_unescape = html.unescape
+
+latexText = html_unescape(latexText)
 latexText = ('\\begin{tweet}'
                  + latexText
                  + '\\end{tweet}')
