@@ -12,8 +12,10 @@ import json
 import twarc
 import argparse
 import sys
+import html
 from enum import Enum
 import six.moves.urllib as urllib
+from six import u as unicode
 from icu import SimpleDateFormat, DateFormat, Locale
 tweetDf = SimpleDateFormat("EEE MMM dd hh:mm:ss xx yyyy", Locale.getUS())
 
@@ -310,8 +312,7 @@ if i + 1 in decorationsEnds:
 # Wrap emoji characters with switch to emoji containing font.
 
 emojiRe = r"([\p{Emoticons}\p{Miscellaneous Symbols and Pictographs}\p{Transport and Map Symbols}\p{So}]+)"
-if sys.version_info[0] < 3:
-    emojiRe = unicode(emojiRe)
+emojiRe = unicode(emojiRe)
 
 latexText = regex.sub(emojiRe, r"{\\emojifont \g<1>}", latexText, regex.V1 | regex.UNICODE)
 #latexText = regex.subf(r"(\p{Emoticons}+)", "\{\\emojifont {1}\}", latexText)
@@ -378,7 +379,7 @@ if 'place' in tj and tj['place'] is not None:
     map_url = urllib.parse.urlunsplit(('https', 'www.google.com', '/maps/search/',
          urllib.parse.urlencode({
              'api': 1,
-             'query': place.get('full_name', '') + ', ' + place.get('country')
+             'query': (place.get('full_name', '') + ', ' + place.get('country')).encode('utf-8')
              }),
           None))
     latexText += ('\\tweetPlace{'
@@ -391,7 +392,7 @@ if 'place' in tj and tj['place'] is not None:
 
 # Wrap into tweet environment.
 
-latexText = htmlParser.unescape(latexText)
+latexText = html.unescape(latexText)
 latexText = ('\\begin{tweet}'
                  + latexText
                  + '\\end{tweet}')
