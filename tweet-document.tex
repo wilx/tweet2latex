@@ -43,7 +43,7 @@
 % \setsansfont{TeX Gyre Heros}
 \setsansfont{Noto Sans}
 
-
+\usepackage{wrapfig}
 \usepackage{microtype}
 
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
@@ -64,9 +64,11 @@
 \newenvironment{tweet}{%
   \newcommand{\tweetUserImage}[3]{%
     \begingroup%
-      \includegraphics[keepaspectratio,height=1em]{##2}%
-      \quad
-    \endgroup
+      \setbox0=\hbox{%
+        \includegraphics[keepaspectratio,height=0.9\baselineskip]{##2}}%
+      \parbox{\wd0}{\box0}%
+      \quad%
+    \endgroup%
   }%
   \newcommand{\tweetUserName}[3]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\quad
     \href{https://twitter.com/intent/user?user_id=##1}{{\small

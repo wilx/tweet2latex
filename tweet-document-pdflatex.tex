@@ -27,6 +27,9 @@
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+\newcommand{\vcenteredinclude}[1]{\begingroup%
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
 
 \newtcolorbox[list inside=tweet, auto counter, number within=section,%
   crefname={tweet}{tweets}]{tweetbox}[2]{%
@@ -37,9 +40,11 @@
 \newenvironment{tweet}{%
   \newcommand{\tweetUserImage}[3]{%
     \begingroup%
-      \includegraphics[keepaspectratio,height=1em]{##2}%
-      \quad
-    \endgroup
+      \setbox0=\hbox{%
+        \includegraphics[keepaspectratio,height=1em]{##2}}%
+      \parbox{\wd0}{\box0}%
+      \quad%
+    \endgroup%
   }%
   \newcommand{\tweetUserName}[3]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\quad
     \href{https://twitter.com/intent/user?user_id=##1}{{\small
