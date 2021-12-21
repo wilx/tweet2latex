@@ -8,7 +8,7 @@ print("packages: %s"%setuptools.find_packages("."))
 
 setuptools.setup(
     name='tweet2latex',
-    version='1.1',
+    version='1.2',
     scripts=['tweet2latex.py'],
     author="Václav Haisman",
     author_email="vhaisman+tweet2latex@gmail.com",
@@ -30,6 +30,7 @@ setuptools.setup(
     install_requires=[
           'twarc',
           'six',
-          'PyICU'
+          'PyICU',
+          'regex'
     ],
 )
