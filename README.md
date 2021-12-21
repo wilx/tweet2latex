@@ -1,3 +1,5 @@
+PyPi project: https://pypi.org/project/tweet2latex/
+
 This is proof of concept utility for retrieval of Tweets by their IDs and
 their conversion to LaTeX. This utility requires Python and
 [`twarc`](https://github.com/edsu/twarc) module.
