@@ -5,7 +5,7 @@ idna==3.4
 more-itertools==9.1.0
 oauthlib==3.2.2
 packaging==23.1
-pluggy==1.0.0
+pluggy==1.2.0
 py==1.11.0
 PyICU==2.11
 pyparsing==3.1.0
