@@ -2,7 +2,7 @@ attrs==23.1.0
 certifi==2023.7.22
 chardet==5.1.0
 idna==3.4
-more-itertools==9.1.0
+more-itertools==10.0.0
 oauthlib==3.2.2
 packaging==23.1
 pluggy==1.2.0
