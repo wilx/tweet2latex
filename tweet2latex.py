@@ -1,9 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Fetch a single tweet as JSON using its id and output LaTeX.
 """
-from __future__ import print_function
 
 import os
 import re
@@ -13,28 +12,16 @@ import twarc
 import argparse
 import sys
 import html
+import configparser
+import urllib.parse
+import urllib.request
 from enum import Enum
-import six.moves.urllib as urllib
-from six import u as unicode
 from icu import SimpleDateFormat, DateFormat, Locale
 tweetDf = SimpleDateFormat("EEE MMM dd hh:mm:ss xx yyyy", Locale.getUS())
 
 
-try:
-    import configparser  # Python 3
-except ImportError:
-    import ConfigParser as configparser  # Python 2
-
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
-
-try:
-    # Python 2.6-2.7
-    from HTMLParser import HTMLParser
-except ImportError:
-    # Python 3
-    from html.parser import HTMLParser
-htmlParser = HTMLParser()
 
 
 class CaptionPlacement(Enum):
@@ -312,7 +299,6 @@ if i + 1 in decorationsEnds:
 # Wrap emoji characters with switch to emoji containing font.
 
 emojiRe = r"([\p{Emoticons}\p{Miscellaneous Symbols and Pictographs}\p{Transport and Map Symbols}\p{So}]+)"
-emojiRe = unicode(emojiRe)
 
 latexText = regex.sub(emojiRe, r"{\\emojifont \g<1>}", latexText, regex.V1 | regex.UNICODE)
 #latexText = regex.subf(r"(\p{Emoticons}+)", "\{\\emojifont {1}\}", latexText)
@@ -379,7 +365,7 @@ if 'place' in tj and tj['place'] is not None:
     map_url = urllib.parse.urlunsplit(('https', 'www.google.com', '/maps/search/',
          urllib.parse.urlencode({
              'api': 1,
-             'query': (place.get('full_name', '') + ', ' + place.get('country')).encode('utf-8')
+             'query': place.get('full_name', '') + ', ' + place.get('country')
              }),
           None))
     latexText += ('\\tweetPlace{'
@@ -392,12 +378,7 @@ if 'place' in tj and tj['place'] is not None:
 
 # Wrap into tweet environment.
 
-if sys.version_info[0] < 3:
-    html_unescape = HTMLParser.unescape
-else:
-    html_unescape = html.unescape
-
-latexText = html_unescape(latexText)
+latexText = html.unescape(latexText)
 latexText = ('\\begin{tweet}'
                  + latexText
                  + '\\end{tweet}')
@@ -434,7 +415,4 @@ if caption and caption_placement is CaptionPlacement.top:
 elif caption and caption_placement is CaptionPlacement.bottom:
     latexText = latexText + captionText
 
-if sys.version_info[0] < 3:
-    sys.stdout.write(latexText.encode('utf-8'))
-else:
-    sys.stdout.buffer.write(latexText.encode('utf-8'))
+sys.stdout.write(latexText)

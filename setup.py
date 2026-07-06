@@ -17,19 +17,18 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/wilx/tweet2latex/",
     packages=setuptools.find_packages(),
+    python_requires='>=3',
     classifiers=[
          "Development Status :: 4 - Beta",
          "Topic :: Utilities",
          "Topic :: Internet",
          "Topic :: Text Processing :: Markup :: LaTeX",
          "Programming Language :: Python :: 3",
-         "Programming Language :: Python :: 2",
          "License :: OSI Approved :: MIT License",
          "Operating System :: OS Independent"
     ],
     install_requires=[
           'twarc',
-          'six',
           'PyICU',
           'regex'
     ],
